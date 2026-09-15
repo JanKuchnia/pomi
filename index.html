@@ -1,482 +1,1034 @@
 <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>POMI - Polski Producent Narzędzi Ogrodowych ze Stali | Rzeszotary</title>
+  <meta name="description" content="POMI: polski producent łopat, szpadli, wideł i świdrów do gleby ze stali. Własna produkcja w Rzeszotarach od 2011 oraz produkcja Private Label / OEM dla hurtowni i sieci."/>
+  
+  <!-- Favicons & Brand Theme -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="icon" type="image/webp" href="assets/favicon.webp"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png"/>
+  <link rel="shortcut icon" href="assets/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
+  <meta name="theme-color" content="#E20613"/>
+  
+  <!-- Preconnect & Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,600;0,700;0,800;0,900;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+  
+  <!-- Phosphor Icons Font -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
+  
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Chivo', sans-serif;
+        text-wrap: balance;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    
+    /* Technical subtle micro-accents */
+    .spec-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.625rem;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+    }
+  </style>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#f8fafc",
+            "primary-fixed": "#fee2e2",
+            "secondary-fixed": "#e2e8f0",
+            "on-primary-container": "#ffffff",
+            "surface-dim": "#e2e8f0",
+            "primary-fixed-dim": "#fecaca",
+            "on-secondary-fixed-variant": "#334155",
+            "surface-muted": "#f1f5f9",
+            "secondary": "#334155",
+            "on-background": "#0f172a",
+            "status-warning": "#c2410c",
+            "surface-container-highest": "#cbd5e1",
+            "border-focus": "#e20613",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface": "#f8fafc",
+            "tertiary-fixed-dim": "#fed7aa",
+            "primary": "#e20613",
+            "secondary-fixed-dim": "#cbd5e1",
+            "on-primary-fixed": "#7f1d1d",
+            "surface-container-lowest": "#ffffff",
+            "border-hairline": "#e2e8f0",
+            "primary-container": "#c8000f",
+            "on-error": "#ffffff",
+            "inverse-primary": "#f87171",
+            "text-tertiary": "#64748b",
+            "text-primary": "#0f172a",
+            "surface-pure": "#ffffff",
+            "tertiary-fixed": "#ffedd5",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#7c2d12",
+            "on-surface": "#0f172a",
+            "on-tertiary-container": "#431407",
+            "on-surface-variant": "#475569",
+            "status-success": "#16a34a",
+            "tertiary": "#ea580c",
+            "outline": "#94a3b8",
+            "surface-container-high": "#e2e8f0",
+            "surface-subtle": "#f8fafc",
+            "on-tertiary-fixed": "#270a00",
+            "outline-variant": "#e2e8f0",
+            "surface-container": "#f1f5f9",
+            "on-secondary-container": "#1e293b",
+            "surface-variant": "#e2e8f0",
+            "on-secondary-fixed": "#0f172a",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#991b1b",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f8fafc",
+            "inverse-surface": "#18181b",
+            "secondary-container": "#f1f5f9",
+            "surface-tint": "#e20613",
+            "surface-bright": "#ffffff",
+            "background": "#f8fafc",
+            "tertiary-container": "#d97706",
+            "text-secondary": "#475569"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.375rem",
+            "xl": "0.5rem",
+            "2xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter-mobile": "1rem",
+            "space-3xl": "5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.5rem",
+            "margin": "3rem",
+            "space-2xl": "3.5rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.25rem"
+          },
+          fontFamily: {
+            "label-sm": ["DM Sans", "sans-serif"],
+            "label-md": ["DM Sans", "sans-serif"],
+            "display-xl-mobile": ["Chivo", "sans-serif"],
+            "headline-lg-mobile": ["Chivo", "sans-serif"],
+            "title-sm": ["DM Sans", "sans-serif"],
+            "title-md": ["DM Sans", "sans-serif"],
+            "headline-lg": ["Chivo", "sans-serif"],
+            "body-lg": ["DM Sans", "sans-serif"],
+            "headline-sm": ["Chivo", "sans-serif"],
+            "body-sm": ["DM Sans", "sans-serif"],
+            "caption": ["DM Sans", "sans-serif"],
+            "headline-md": ["Chivo", "sans-serif"],
+            "body-md": ["DM Sans", "sans-serif"],
+            "display-xl": ["Chivo", "sans-serif"]
+          },
+          fontSize: {
+            "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "display-xl-mobile": ["34px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "title-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+            "title-md": ["18px", { lineHeight: "26px", fontWeight: "600" }],
+            "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "caption": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+            "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "display-xl": ["54px", { lineHeight: "62px", letterSpacing: "-0.03em", fontWeight: "800" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased" id="top">
 
-<html lang="pl"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eef3ec","primary-fixed":"#d1fae5","secondary-fixed":"#dce7dc","on-primary-container":"#064e3b","surface-dim":"#d8e2d7","primary-fixed-dim":"#a7f3d0","on-secondary-fixed-variant":"#263a2c","surface-muted":"#EDF3EC","secondary":"#4a5f50","on-background":"#14281d","status-warning":"#c2410c","surface-container-highest":"#d7e3d6","border-focus":"#15803d","on-primary":"#ffffff","on-tertiary":"#ffffff","surface":"#f8faf7","tertiary-fixed-dim":"#fed7aa","primary":"#166534","secondary-fixed-dim":"#bccabc","on-primary-fixed":"#022c22","surface-container-lowest":"#ffffff","border-hairline":"#E2E8F0","primary-container":"#15803d","on-error":"#ffffff","inverse-primary":"#86efac","text-tertiary":"#8c9b91","text-primary":"#0f172a","surface-pure":"#FFFFFF","tertiary-fixed":"#ffedd5","error-container":"#ffdad6","on-tertiary-fixed-variant":"#7c2d12","on-surface":"#14281d","on-tertiary-container":"#431407","on-surface-variant":"#3b4c40","status-success":"#15803d","tertiary":"#b45309","outline":"#637567","surface-container-high":"#e2ebe0","surface-subtle":"#F4F7F3","on-tertiary-fixed":"#270a00","outline-variant":"#c1cdc3","surface-container":"#e7efe5","on-secondary-container":"#3d5143","surface-variant":"#d7e3d6","on-secondary-fixed":"#132418","on-secondary":"#ffffff","on-error-container":"#93000a","on-primary-fixed-variant":"#065f46","error":"#ba1a1a","inverse-on-surface":"#f0fdf4","inverse-surface":"#1b2720","secondary-container":"#d5e4d5","surface-tint":"#166534","surface-bright":"#f8faf7","background":"#f8faf7","tertiary-container":"#d97706","text-secondary":"#475569"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-mobile":"1rem","space-3xl":"6rem","space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-lg":"1.5rem","margin":"3rem","space-2xl":"4rem","gutter":"1.5rem","space-xl":"2.5rem"},fontFamily:{"label-sm":["Inter"],"label-md":["Inter"],"display-xl-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"title-sm":["Inter"],"title-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Inter"],"caption":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"],"display-xl":["Plus Jakarta Sans"]},fontSize:{"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"caption":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"display-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-low text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 lg:px-12 h-10 flex items-center justify-between font-label-sm text-label-sm"><div class="flex items-center gap-6"><span class="flex items-center gap-1.5 text-on-surface"><span class="material-symbols-outlined text-[16px] text-primary">call</span><span class="text-on-surface-variant">Tel:</span><strong class="text-on-surface">603 679 210</strong></span><span class="hidden sm:flex items-center gap-1.5 text-on-surface"><span class="material-symbols-outlined text-[16px] text-primary">mail</span><span>biuro@lopaty.eu</span></span><span class="hidden md:flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span><span>Rzeszotary (pn–pt 07:00–17:00)</span></span></div><div class="flex items-center gap-4"><div class="hidden lg:flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-status-success"></span><span class="text-on-surface-variant font-medium text-primary font-semibold">STEEL GARDEN &amp; OEM</span></div><div class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">B2B &amp; Hurtownia</div></div></div></div><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold text-[15px] shadow-sm tracking-tight">P</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase leading-none font-bold">POMI</span><span class="font-caption text-caption text-secondary uppercase tracking-wider">Producent od 2011</span></div></div><nav class="hidden lg:flex items-center gap-1 font-title-sm text-title-sm" data-active-classes="bg-primary-container text-on-primary font-title-sm rounded-lg"><a class="px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg" data-path="strona-glowna" href="#">Strona główna</a><a class="px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg" data-path="produkty" href="#">Produkty</a><a class="px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg" data-path="produkcja-pod-marka-wlasna" href="#">Marka własna</a><a class="px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg" data-path="o-firmie" href="#">O firmie</a><a class="px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg" data-path="kontakt" href="#">Kontakt</a></nav><div class="flex items-center gap-3"><a class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.05)]" data-path="kontakt" href="#"><span class="material-symbols-outlined text-[18px]">call</span><span>Zapytaj o wycenę</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<!-- Top Visual Hero -->
-<section class="relative w-full bg-surface-container-lowest overflow-hidden">
-<div class="absolute inset-0 pointer-events-none opacity-40">
-<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary-fixed blur-3xl"></div>
-<div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-secondary-fixed blur-3xl"></div>
-</div>
-<div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl lg:py-space-2xl relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<!-- Left Hero Copy -->
-<div class="lg:col-span-7 flex flex-col items-start">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mb-space-md">
-<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
-<span class="w-2 h-2 rounded-full bg-primary-container -ml-3.5"></span>
-<span>PRODUCENT NARZĘDZI OGRODOWYCH · RZESZOTARY OD 2011</span>
-</div>
-<h1 class="font-display-xl text-display-xl text-text-primary tracking-tight font-extrabold max-w-2xl">
-            Solidne narzędzia ogrodowe ze stali dla <span class="text-primary-container">wymagających</span>
-</h1>
-<p class="font-body-lg text-body-lg text-text-secondary mt-space-md max-w-xl leading-relaxed">
-            Robimy łopaty, szpadle, widły i świdry do gleby. Produkujemy je sami w Rzeszotarach oraz realizujemy dedykowaną produkcję pod marką klienta (Private Label / OEM).
-          </p>
-<div class="flex flex-wrap items-center gap-4 mt-space-lg w-full sm:w-auto">
-<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all duration-200 shadow-sm group" data-path="produkty" href="#">
-<span>Zobacz katalog produktów</span>
-<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" data-path="produkcja-pod-marka-wlasna" href="#">
-<span class="material-symbols-outlined text-[18px] text-primary">precision_manufacturing</span>
-<span>Produkcja pod marką własną</span>
-</a>
-</div>
-<!-- Trust Badges Bar -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-space-xl pt-space-lg w-full bg-surface-container-low/60 rounded-xl p-4">
-<div class="flex items-center gap-3">
-<span class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
-<span class="material-symbols-outlined text-[22px]">verified</span>
-</span>
-<div>
-<span class="font-label-sm text-label-sm text-text-primary block font-bold">Polska stal</span>
-<span class="font-caption text-caption text-text-secondary">własna produkcja 100%</span>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
-<span class="material-symbols-outlined text-[22px]">local_shipping</span>
-</span>
-<div>
-<span class="font-label-sm text-label-sm text-text-primary block font-bold">Hurt i OEM</span>
-<span class="font-caption text-caption text-text-secondary">dla sieci i dystrybutorów</span>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
-<span class="material-symbols-outlined text-[22px]">support_agent</span>
-</span>
-<div>
-<span class="font-label-sm text-label-sm text-text-primary block font-bold">Bezpośredni kontakt</span>
-<span class="font-caption text-caption text-text-secondary">tel. 603 679 210</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Hero Visual Showcase -->
-<div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
-<div class="relative rounded-2xl bg-gradient-to-br from-surface-container-lowest to-surface-container-low p-6 lg:p-8 shadow-xl">
-<div class="flex items-center justify-between pb-4">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-1 rounded bg-primary text-on-primary font-caption text-caption font-bold tracking-wide uppercase">STEEL GARDEN</span>
-<span class="font-caption text-caption text-text-secondary">Seria przemysłowa</span>
-</div>
-<span class="flex items-center gap-1 font-label-sm text-label-sm text-status-success font-semibold">
-<span class="material-symbols-outlined text-[16px]">check_circle</span>
-                Hartowana stal C45
+  <!-- A11y Skip Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-on-primary focus:rounded-lg focus:shadow-xl focus:outline-none font-label-md">
+    Przejdź do treści głównej
+  </a>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/40">
+    <!-- Top Utility Bar -->
+    <div class="bg-surface-container-low text-on-surface-variant border-b border-outline-variant/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-10 flex items-center justify-between font-label-sm text-label-sm">
+        <div class="flex items-center gap-4 sm:gap-6">
+          <a href="tel:603679210" class="flex items-center gap-1.5 text-on-surface hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+            <i class="ph ph-phone text-primary text-base" aria-hidden="true"></i>
+            <span class="text-on-surface-variant">Tel:</span>
+            <strong class="text-on-surface font-bold">603 679 210</strong>
+          </a>
+          <a href="mailto:biuro@lopaty.eu" class="hidden sm:flex items-center gap-1.5 text-on-surface hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+            <i class="ph ph-envelope-simple text-primary text-base" aria-hidden="true"></i>
+            <span>biuro@lopaty.eu</span>
+          </a>
+          <span class="hidden md:flex items-center gap-1.5 text-on-surface-variant">
+            <i class="ph ph-clock text-primary text-base" aria-hidden="true"></i>
+            <span>Rzeszotary (Pn-Pt 07:00-17:00)</span>
+          </span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden lg:flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-status-success" aria-hidden="true"></span>
+            <span class="text-on-surface font-semibold">STEEL GARDEN &amp; OEM</span>
+          </div>
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+            <i class="ph-bold ph-shield-check text-primary text-sm" aria-hidden="true"></i>
+            <span>B2B &amp; Hurtownia</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="h-18 lg:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4">
+      <!-- Logo -->
+      <a href="#top" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg py-1" aria-label="POMI - Strona główna">
+        <img src="assets/logo.webp" alt="POMI Producent Artykułów Ogrodniczych" class="h-10 sm:h-12 w-auto object-contain" width="140" height="48"/>
+      </a>
+
+      <!-- Desktop Navigation with Phosphor Icons -->
+      <nav class="hidden lg:flex items-center gap-1 font-title-sm text-title-sm" aria-label="Nawigacja główna">
+        <a class="group inline-flex items-center gap-2 px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#top">
+          <i class="ph ph-house text-secondary group-hover:text-primary transition-colors text-lg" aria-hidden="true"></i>
+          <span>Strona główna</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#produkty">
+          <i class="ph ph-stack text-secondary group-hover:text-primary transition-colors text-lg" aria-hidden="true"></i>
+          <span>Katalog produktów</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#marka-wlasna">
+          <i class="ph ph-tag text-secondary group-hover:text-primary transition-colors text-lg" aria-hidden="true"></i>
+          <span>Marka własna (OEM)</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#o-firmie">
+          <i class="ph ph-buildings text-secondary group-hover:text-primary transition-colors text-lg" aria-hidden="true"></i>
+          <span>O firmie</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 px-3.5 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#kontakt-formularz">
+          <i class="ph ph-phone-call text-secondary group-hover:text-primary transition-colors text-lg" aria-hidden="true"></i>
+          <span>Kontakt</span>
+        </a>
+      </nav>
+
+      <!-- Action Button & Mobile Hamburger Toggle -->
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#kontakt-formularz">
+          <i class="ph-bold ph-chat-teardrop-dots text-base" aria-hidden="true"></i>
+          <span>Zapytaj o ofertę hurtową</span>
+        </a>
+
+        <!-- Hamburger Button (Mobile / Tablet) -->
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-label="Otwórz menu nawigacji" aria-expanded="false" aria-controls="mobile-menu">
+          <i id="menu-open-icon" class="ph-bold ph-list text-2xl block" aria-hidden="true"></i>
+          <i id="menu-close-icon" class="ph-bold ph-x text-2xl hidden" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest border-b border-outline-variant/40 shadow-xl transition-all duration-200">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-3">
+        <nav class="flex flex-col gap-1 font-title-sm text-title-sm" aria-label="Nawigacja mobilna">
+          <a class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" href="#top">
+            <i class="ph ph-house text-primary text-xl" aria-hidden="true"></i>
+            <span>Strona główna</span>
+          </a>
+          <a class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" href="#produkty">
+            <i class="ph ph-stack text-primary text-xl" aria-hidden="true"></i>
+            <span>Katalog produktów (Łopaty, Szpadle, Widły, Świdry)</span>
+          </a>
+          <a class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" href="#marka-wlasna">
+            <i class="ph ph-tag text-primary text-xl" aria-hidden="true"></i>
+            <span>Produkcja pod marką własną (OEM)</span>
+          </a>
+          <a class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" href="#o-firmie">
+            <i class="ph ph-buildings text-primary text-xl" aria-hidden="true"></i>
+            <span>O firmie POMI</span>
+          </a>
+          <a class="mobile-nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" href="#kontakt-formularz">
+            <i class="ph ph-phone-call text-primary text-xl" aria-hidden="true"></i>
+            <span>Kontakt i wyceny hurtowe</span>
+          </a>
+        </nav>
+        
+        <div class="pt-4 mt-2 border-t border-outline-variant/30 flex flex-col gap-3">
+          <a class="mobile-nav-link inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors text-center" href="#kontakt-formularz">
+            <i class="ph-bold ph-chat-teardrop-dots text-lg" aria-hidden="true"></i>
+            <span>Zapytaj o ofertę hurtową</span>
+          </a>
+          <div class="flex items-center justify-between text-body-sm text-on-surface-variant px-1 pt-1">
+            <a href="tel:603679210" class="inline-flex items-center gap-1.5 font-semibold text-on-surface hover:underline">
+              <i class="ph ph-phone text-primary text-lg" aria-hidden="true"></i>
+              <span>603 679 210</span>
+            </a>
+            <span class="inline-flex items-center gap-1 text-caption font-caption text-secondary">
+              <i class="ph ph-clock text-secondary text-sm" aria-hidden="true"></i>
+              <span>Pn-Pt 07:00-17:00</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-28 lg:pt-30 bg-surface min-h-screen" id="main-content">
+    <div class="flex flex-col w-full">
+
+      <!-- Hero Section -->
+      <section class="relative w-full bg-surface-container-lowest overflow-hidden border-b border-outline-variant/30">
+        <div class="absolute inset-0 pointer-events-none opacity-40">
+          <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary-fixed blur-3xl"></div>
+          <div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-secondary-fixed blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-space-xl lg:py-space-2xl relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            
+            <!-- Left Hero Copy -->
+            <div class="lg:col-span-7 flex flex-col items-start">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mb-space-md border border-outline-variant/40">
+                <i class="ph-bold ph-shield-check text-status-success text-base" aria-hidden="true"></i>
+                <span class="font-semibold tracking-wide">Polski producent narzędzi ze stali · Rzeszotary od 2011</span>
               </span>
-</div>
-<div class="relative h-72 w-full rounded-xl bg-surface-container-lowest flex items-center justify-center overflow-hidden my-4 shadow-sm group">
-<img class="object-contain w-full h-full p-4 group-hover:scale-105 transition-transform duration-300" data-alt="Industrial professional garden tools POMI Steel Garden series forged carbon steel shovel with ergonomic handle, studio high-contrast product photography on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO79b7uWaEYexgeOofzwS2L7omD3GWji-IAAslm3HgdpLrImJdEYYMzFZk84YN2Diwplx0OBI-mNoY7Fe-McyuKVcvIqY-gkygXy3i-bAaRAXjwyk5XPQsS6cobergvunr5w2YkqqnoC1CXJJdnzRL71ovDkozsPQURGCRRqipO5h9VjUJyyDWR2Lx3ddJSp4W7QOgJTY_P7dptw5-xH6d23zZPszKwia637d0tBZhwcZSw788wtCn"/>
-<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm border border-surface-container-high">
-<span class="font-caption text-caption text-text-secondary uppercase">Grubość stali</span>
-<span class="font-title-sm text-title-sm text-text-primary font-bold block">2.0 mm – 2.5 mm</span>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-3 pt-2">
-<div class="rounded-lg bg-surface-pure p-3">
-<span class="font-caption text-caption text-secondary uppercase">Wykończenie</span>
-<p class="font-label-sm text-label-sm text-on-surface font-bold mt-0.5">Lakier proszkowy RAL</p>
-</div>
-<div class="rounded-lg bg-surface-pure p-3">
-<span class="font-caption text-caption text-secondary uppercase">Trzonek</span>
-<p class="font-label-sm text-label-sm text-on-surface font-bold mt-0.5">Ergonomiczny stal / jesion</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Product Catalog Section (4 Families) -->
-<section class="w-full py-space-3xl bg-surface">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-6">
-<div class="max-w-2xl">
-<div class="flex items-center gap-2 mb-2">
-<span class="w-1.5 h-6 bg-primary-container rounded-full"></span>
-<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Katalog produktów</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-text-primary font-bold">
-            Co robimy — 4 rodziny narzędzi STEEL GARDEN
-          </h2>
-<p class="font-body-md text-body-md text-text-secondary mt-2 leading-relaxed">
-            Wszystkie robione u nas, w Rzeszotarach. Ze stali, z linii STEEL GARDEN. Nie prowadzimy sprzedaży detalicznej online — wyceny i dostawy realizujemy bezpośrednio dla hurtu, sieci i dystrybucji.
-          </p>
-</div>
-<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary hover:text-primary-container transition-colors shrink-0" data-path="produkty" href="#">
-<span>Przejrzyj cały katalog</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-<!-- 4 Product Family Cards -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Card 1: Łopaty -->
-<div class="group flex flex-col bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-<div class="relative w-full h-56 rounded-lg bg-surface-subtle flex items-center justify-center overflow-hidden mb-4">
-<img class="object-contain w-full h-full p-4 group-hover:scale-105 transition-transform duration-300" data-alt="POMI heavy-duty steel garden shovel with hardened blade and blue grip, professional tool for landscaping, clean studio product shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOcBKWPiRkRrod6Yjty9ehlhLOP8ylCKvP5J2YPjQ43buCnIqJ_EPSHljGlFhMLl8ndxBjsAvCHQKB2ApGCYXZAtrvYUlrYMUQFM0XZmQvnNFZvuqjDmh1uy10UPjuiqaENYSIEdXTmho7B9Byn-VBQfHEL-iqG9cM3gNKxOiUdZIbGt7uq1xWoUCfnxoNVxJNX9bBIW-L6l093yFSv2NGiuf9_9V1EU0aLmzTSwQ7302fX8zGeP8C"/>
-<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">01 / ŁOPATY</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">Łopaty</h3>
-<p class="font-body-sm text-body-sm text-text-secondary mt-2 flex-grow leading-relaxed">
-            Do kopania, przerzucania ziemi, prac przy grządkach i większych robót ziemnych. Ostrze ze stali, uchwyt dobrany pod dłoń i pod długą pracę, nie na jedno sezonowe użycie.
-          </p>
-<div class="mt-4 pt-4 bg-surface-container-low/50 rounded-lg p-3">
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary mb-1">
-<span>Przeznaczenie:</span>
-<strong class="text-text-primary font-semibold">Gleba / Piasek / Kruszywo</strong>
-</div>
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary">
-<span>Wytrzymałość:</span>
-<strong class="text-primary font-semibold">Klasa Heavy Duty</strong>
-</div>
-</div>
-<a class="mt-4 inline-flex items-center justify-between font-label-sm text-label-sm text-primary font-bold group-hover:text-primary-container transition-colors" data-path="produkty" href="#">
-<span>Zobacz łopaty</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<!-- Card 2: Szpadle -->
-<div class="group flex flex-col bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-<div class="relative w-full h-56 rounded-lg bg-surface-subtle flex items-center justify-center overflow-hidden mb-4">
-<img class="object-contain w-full h-full p-4 group-hover:scale-105 transition-transform duration-300" data-alt="POMI sharp steel spade for trenching and lawn edging with ergonomically angled shaft, polished studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM6JG0lNvxYdBuJAT5lqOPzAtpGPLjD29jnOg71R-owN-LorFP9AfltMGyFN1CumEh6iMAUkru79Vgesdb4LrTLsA9mu1Ocedf2CfWOPN46eJ7-_-ckLmwp7uHgm25Qxp4uPtckbV045QptaHXY1mLB-6L_ixfsFsa36XHZ2h1EWYKwSWUEqoIRBrUOyz-1HWgWP2TVVoRS-Ee-ruQeDQOqx5m8DLxkBWLkZ-popw53mLUMAhxhhDg"/>
-<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">02 / SZPADLE</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">Szpadle</h3>
-<p class="font-body-sm text-body-sm text-text-secondary mt-2 flex-grow leading-relaxed">
-            Do cięcia darni, przekopywania rabat i pracy tam, gdzie łopata jest za gruba, a ręce za mało dokładne. Ostrze ze stali hartowanej profilowane pod but.
-          </p>
-<div class="mt-4 pt-4 bg-surface-container-low/50 rounded-lg p-3">
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary mb-1">
-<span>Warianty:</span>
-<strong class="text-text-primary font-semibold">Ostre oraz proste</strong>
-</div>
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary">
-<span>Krawędź:</span>
-<strong class="text-primary font-semibold">Zaostrzona fabrycznie</strong>
-</div>
-</div>
-<a class="mt-4 inline-flex items-center justify-between font-label-sm text-label-sm text-primary font-bold group-hover:text-primary-container transition-colors" data-path="produkty" href="#">
-<span>Zobacz szpadle</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<!-- Card 3: Widły -->
-<div class="group flex flex-col bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-<div class="relative w-full h-56 rounded-lg bg-surface-subtle flex items-center justify-center overflow-hidden mb-4">
-<img class="object-contain w-full h-full p-4 group-hover:scale-105 transition-transform duration-300" data-alt="POMI heavy steel garden fork with durable hardened tines for compost and soil aerating, professional industrial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_7QdwYWCubz_JjHGCSpTQmQ1DY_xsghi4FdVgMXE1VFAzRFdlJDp9Colnwgqn84H3fAtJq1xH5J--lXSJvSqN3C375zcSRN2cz1DzWPaJhvblzClQTvEj2YhkPn-d6wX6fwatgqIBzB3sqRXraqDqpWmxtOSVn09nqA9WTdcRYFOpjTo62qxrVFqqWRHXGb4DAPFFx3CsPp0nOHJ3KPUzrCJllDTj_lBJPhhvSrEpI-q-_Yq1tZrd"/>
-<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">03 / WIDŁY</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">Widły</h3>
-<p class="font-body-sm text-body-sm text-text-secondary mt-2 flex-grow leading-relaxed">
-            Do przerzucania kompostu, obornika, ściółki i siana oraz napowietrzania gleby. Zęby ze stali sprężystej odporne na odkształcenia trwałego nacisku.
-          </p>
-<div class="mt-4 pt-4 bg-surface-container-low/50 rounded-lg p-3">
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary mb-1">
-<span>Liczba zębów:</span>
-<strong class="text-text-primary font-semibold">4-zębne gospodarcze</strong>
-</div>
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary">
-<span>Odporność:</span>
-<strong class="text-primary font-semibold">Stal sprężynowa</strong>
-</div>
-</div>
-<a class="mt-4 inline-flex items-center justify-between font-label-sm text-label-sm text-primary font-bold group-hover:text-primary-container transition-colors" data-path="produkty" href="#">
-<span>Zobacz widły</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<!-- Card 4: Świdry -->
-<div class="group flex flex-col bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-<div class="relative w-full h-56 rounded-lg bg-surface-subtle flex items-center justify-center overflow-hidden mb-4">
-<img class="object-contain w-full h-full p-4 group-hover:scale-105 transition-transform duration-300" data-alt="POMI steel manual ground auger soil drill for post holes and trees planting, precision engineered dual flight spiral" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANb0Aouc4SdWYs7uNq_ow6lPu7dXyMAY2T-j6bjVCM6tsrQsqJvPP6rBnLnzjp4ht8GrAHKKlbh4sdy7lvIpiJbN3oX9AK_iPx9yFQCCMKTexWX9fRkZfVEwbFqhknJM_V1kIXHHskkZX67iS_PNRy89CYievp8diCjfa7swtVanL-U4_0HaPrhLOl-esEenzjieaevlbA2NBk4xk9gR-MabLkfG8V4WHOaowA9jAwobZ5Hkxjppzu"/>
-<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">04 / ŚWIDRY</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">Świdry do gleby</h3>
-<p class="font-body-sm text-body-sm text-text-secondary mt-2 flex-grow leading-relaxed">
-            Do wiercenia dołów pod sadzonki, słupki ogrodzeniowe i altany. Precyzyjny ślimak z hartowanej stali i wysoka wytrzymałość na skręcanie w trudnym gruncie.
-          </p>
-<div class="mt-4 pt-4 bg-surface-container-low/50 rounded-lg p-3">
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary mb-1">
-<span>Średnice:</span>
-<strong class="text-text-primary font-semibold">100 mm do 250 mm</strong>
-</div>
-<div class="flex items-center justify-between text-caption font-caption text-text-secondary">
-<span>Konstrukcja:</span>
-<strong class="text-primary font-semibold">Spawana wzmocniona</strong>
-</div>
-</div>
-<a class="mt-4 inline-flex items-center justify-between font-label-sm text-label-sm text-primary font-bold group-hover:text-primary-container transition-colors" data-path="produkty" href="#">
-<span>Zobacz świdry do gleby</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Private Label Link Banner -->
-<div class="mt-space-xl rounded-2xl bg-surface-container-high p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm border border-outline-variant/40">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">branding_watermark</span>
-</div>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Szukacie tych narzędzi pod własną marką?</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Produkujemy serie OEM z logotypem klienta, indywidualną kolorystyką RAL i etykietowaniem.</p>
-</div>
-</div>
-<a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container-lowest/80 transition-colors shadow-sm shrink-0 border border-outline-variant/30" data-path="produkcja-pod-marka-wlasna" href="#">
-<span>Sprawdź ofertę marki własnej</span>
-<span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Private Label Section (B2B Deep Dive) -->
-<section class="w-full py-space-3xl bg-inverse-surface text-inverse-on-surface relative overflow-hidden">
-<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-7">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/30 font-caption text-caption text-primary-fixed uppercase tracking-widest font-semibold mb-space-md border border-primary/40">
-<span>PRIVATE LABEL DLA DYSTRYBUTORÓW I SIECI</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-primary font-bold tracking-tight">
-            Zbuduj własną linię narzędzi ogrodowych bez ponoszenia kosztów parku maszynowego
-          </h2>
-<p class="font-body-lg text-body-lg text-secondary-fixed mt-space-md leading-relaxed">
-            Jeśli jesteście hurtownikiem, siecią sklepów lub dystrybutorem i szukacie producenta, który wykona narzędzia pod Wasze logo i specyfikację — tym się zajmujemy. Szybko reagujemy na zmiany w specyfikacji, pilnujemy powtarzalnej jakości w każdej partii i gwarantujemy terminowość dostaw.
-          </p>
-<div class="mt-space-lg flex flex-wrap gap-4">
-<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-md" data-path="produkcja-pod-marka-wlasna" href="#">
-<span>Dowiedz się więcej o marce własnej</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-secondary/40 text-on-primary font-label-md text-label-md hover:bg-secondary/60 transition-colors" href="#kontakt-formularz">
-<span class="material-symbols-outlined text-[18px]">request_quote</span>
-<span>Skonsultuj partię próbną</span>
-</a>
-</div>
-</div>
-<div class="lg:col-span-5 flex flex-col gap-4 mt-space-xl lg:mt-0">
-<div class="rounded-xl bg-surface-container-lowest/10 backdrop-blur-sm p-6 border border-white/5">
-<div class="flex items-start gap-4">
-<span class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary-fixed flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[22px]">tune</span>
-</span>
-<div>
-<h3 class="font-title-sm text-title-sm text-on-primary font-bold">1. Elastyczna specyfikacja</h3>
-<p class="font-body-sm text-body-sm text-secondary-fixed mt-1">Kształt ostrza, grubość stali, rodzaj wygięcia, typ trzonka (stalowy profilowany / jesion) oraz kolorystyka proszkowa pod wytyczne marki.</p>
-</div>
-</div>
-</div>
-<div class="rounded-xl bg-surface-container-lowest/10 backdrop-blur-sm p-6 border border-white/5">
-<div class="flex items-start gap-4">
-<span class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary-fixed flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[22px]">local_offer</span>
-</span>
-<div>
-<h3 class="font-title-sm text-title-sm text-on-primary font-bold">2. Oznakowanie i branding</h3>
-<p class="font-body-sm text-body-sm text-secondary-fixed mt-1">Twoje logo bezpośrednio na narzędziu, etykiety kodowe EAN dla sieci handlowych i zoptymalizowane pakowanie zbiorcze gotowe na regał sklepowy.</p>
-</div>
-</div>
-</div>
-<div class="rounded-xl bg-surface-container-lowest/10 backdrop-blur-sm p-6 border border-white/5">
-<div class="flex items-start gap-4">
-<span class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary-fixed flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[22px]">factory</span>
-</span>
-<div>
-<h3 class="font-title-sm text-title-sm text-on-primary font-bold">3. Gwarancja powtarzalności</h3>
-<p class="font-body-sm text-body-sm text-secondary-fixed mt-1">Produkcja we własnym zakładzie w Rzeszotarach pod Krakowem. Ciągły nadzór nad zgrzewami, tłoczeniem i hartowaniem bez pośredników.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Technical Story & Company Profile -->
-<section class="w-full py-space-3xl bg-surface-container-lowest">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-6 relative">
-<div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-high h-96">
-<img class="object-cover w-full h-full" data-alt="POMI steel manufacturing plant in Rzeszotary with heavy metal stamping presses forging shovel blades with blue powder coating, clean modern workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVtWkv7E1tPTkhAw2_jKNVldmsiothORONGJNRIfOpHxiz3TiqpHD05yfCKNEjxfgCwZzdH8SiE8Hf51oPmYFWZMTezXZHXU7s35OX1RB_ao9k06UwuFiRkB2anxSu-2vc-SA-qnQg6oca6vRUaZu9VPOJ4UIGINwVUOwUlHbRg2-QPJddsuv96rRz4aqiy0uSNbxS_NWM_O81nTgn1QvInQP5FiuDuZN99H2-fFmuq2wp5zkWmCnK"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent flex items-end p-6">
-<div class="text-on-primary">
-<span class="font-caption text-caption uppercase tracking-wider text-primary-fixed font-bold">Zakład Produkcyjny</span>
-<p class="font-headline-sm text-headline-sm font-bold">Rzeszotary, Galicyjska 61</p>
-<p class="font-body-sm text-body-sm text-secondary-fixed">Własna linia tłoczenia, spawania i lakierowania proszkowego</p>
-</div>
-</div>
-</div>
-<!-- Small Floating Metric Badge -->
-<div class="absolute -bottom-6 -right-4 bg-surface-pure rounded-xl p-4 shadow-xl hidden sm:flex items-center gap-3 border border-outline-variant/30">
-<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-sm font-extrabold">
-              14
+              <h1 class="font-display-xl text-display-xl-mobile sm:text-headline-lg lg:text-display-xl text-text-primary tracking-tight font-extrabold max-w-2xl leading-tight">
+                Solidne narzędzia ogrodowe ze stali dla <span class="text-primary-container">wymagających</span>
+              </h1>
+              <p class="font-body-lg text-body-lg text-text-secondary mt-space-md max-w-xl leading-relaxed">
+                Produkujemy łopaty, szpadle, widły i świdry do gleby. Własny zakład w Rzeszotarach oraz dedykowana produkcja pod marką klienta (Private Label / OEM).
+              </p>
+              
+              <!-- Hero CTA Links -->
+              <div class="flex flex-wrap items-center gap-4 mt-space-lg w-full sm:w-auto">
+                <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all duration-200 shadow-sm group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#produkty">
+                  <span>Zobacz katalog produktów</span>
+                  <i class="ph-bold ph-arrow-right text-base group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+                </a>
+                <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary border border-outline-variant/40" href="#marka-wlasna">
+                  <i class="ph ph-factory text-primary text-lg" aria-hidden="true"></i>
+                  <span>Produkcja pod marką własną</span>
+                </a>
+              </div>
+
+              <!-- Trust Badges Bar (Clean & Unboxed) -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-space-xl pt-space-lg w-full border-t border-outline-variant/30">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 border border-outline-variant/30">
+                    <i class="ph-bold ph-shield-check text-xl text-primary" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <span class="font-label-sm text-label-sm text-text-primary block font-bold">Polska stal C45</span>
+                    <span class="font-caption text-caption text-text-secondary">Własna produkcja 100%</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 border border-outline-variant/30">
+                    <i class="ph-bold ph-truck text-xl text-primary" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <span class="font-label-sm text-label-sm text-text-primary block font-bold">Hurt i OEM</span>
+                    <span class="font-caption text-caption text-text-secondary">Dla sieci i hurtowni</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 border border-outline-variant/30">
+                    <i class="ph-bold ph-headset text-xl text-primary" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <span class="font-label-sm text-label-sm text-text-primary block font-bold">Bezpośredni kontakt</span>
+                    <span class="font-caption text-caption text-text-secondary">Tel. 603 679 210</span>
+                  </div>
+                </div>
+              </div>
             </div>
-<div>
-<span class="font-label-sm text-label-sm text-on-surface font-bold block">Lat doświadczenia</span>
-<span class="font-caption text-caption text-text-secondary">Produkcja nieprzerwanie od 2011</span>
-</div>
-</div>
-</div>
-<div class="lg:col-span-6 flex flex-col items-start lg:pl-6 mt-space-lg lg:mt-0">
-<div class="inline-flex items-center gap-2 mb-2">
-<span class="w-1.5 h-6 bg-primary-container rounded-full"></span>
-<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">O firmie POMI</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-text-primary font-bold tracking-tight">
-            Narzędzia ze stali, które wytrzymują sezon po sezonie
-          </h2>
-<p class="font-body-md text-body-md text-text-secondary mt-space-md leading-relaxed">
-            Działamy od 2011 roku w Rzeszotarach, w powiecie krakowskim. Inwestujemy w maszyny i technologie, bo to one decydują o tym, czy narzędzie wytrzyma w ciężkiej glinie i gruzie, a nie tylko ładnie prezentuje się w katalogu.
-          </p>
-<p class="font-body-md text-body-md text-text-secondary mt-space-sm leading-relaxed">
-            U nas nie ma bezosobowego biura obsługi ani wieloszczeblowego call center — dzwoniąc, rozmawiasz bezpośrednio z ludźmi odpowiedzialnymi za produkcję i realizację dostaw.
-          </p>
-<div class="grid grid-cols-2 gap-4 mt-space-lg w-full">
-<div class="rounded-xl bg-surface-container-low p-4">
-<span class="font-caption text-caption uppercase text-text-secondary font-semibold">Rok założenia</span>
-<p class="font-headline-sm text-headline-sm font-bold text-primary mt-1">2011</p>
-<p class="font-caption text-caption text-text-secondary mt-0.5">Polski kapitał i produkcja</p>
-</div>
-<div class="rounded-xl bg-surface-container-low p-4">
-<span class="font-caption text-caption uppercase text-text-secondary font-semibold">Lokalizacja</span>
-<p class="font-headline-sm text-headline-sm font-bold text-primary mt-1">Rzeszotary</p>
-<p class="font-caption text-caption text-text-secondary mt-0.5">Województwo małopolskie</p>
-</div>
-</div>
-<div class="mt-space-lg">
-<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary font-bold hover:text-primary-container transition-colors" data-path="o-firmie" href="#">
-<span>Dowiedz się więcej o naszej technologii i historii</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Direct Contact & Wholesale Inquiry Section -->
-<section class="w-full py-space-3xl bg-surface-container-low" id="kontakt-formularz">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="max-w-2xl mx-auto text-center mb-space-xl">
-<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Bezpośredni kontakt handlowy</span>
-<h2 class="font-headline-lg text-headline-lg text-text-primary font-bold mt-1">
-          Zacznijmy współpracę hurtową
-        </h2>
-<p class="font-body-md text-body-md text-text-secondary mt-2">
-          Szukasz stabilnego dostawcy narzędzi stalowych lub kalkulacji dla marki własnej? Skontaktuj się bezpośrednio z Michałem Popkiem.
+
+            <!-- Right Hero Visual Showcase -->
+            <div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+              <div class="relative rounded-2xl bg-gradient-to-br from-surface-container-lowest to-surface-container-low p-6 lg:p-8 shadow-xl border border-outline-variant/40">
+                <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded bg-primary text-on-primary font-caption text-caption font-bold tracking-wide uppercase">STEEL GARDEN</span>
+                    <span class="font-caption text-caption text-text-secondary">Seria profesjonalna</span>
+                  </div>
+                  <span class="flex items-center gap-1.5 font-label-sm text-label-sm text-status-success font-semibold">
+                    <i class="ph-bold ph-check-circle text-status-success text-base" aria-hidden="true"></i>
+                    Hartowana stal C45
+                  </span>
+                </div>
+                <div class="relative h-72 w-full flex items-center justify-center overflow-hidden my-4">
+                  <img fetchpriority="high" class="object-contain w-full h-full p-2" alt="Szpadel i łopata stalowa POMI z serii Steel Garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO79b7uWaEYexgeOofzwS2L7omD3GWji-IAAslm3HgdpLrImJdEYYMzFZk84YN2Diwplx0OBI-mNoY7Fe-McyuKVcvIqY-gkygXy3i-bAaRAXjwyk5XPQsS6cobergvunr5w2YkqqnoC1CXJJdnzRL71ovDkozsPQURGCRRqipO5h9VjUJyyDWR2Lx3ddJSp4W7QOgJTY_P7dptw5-xH6d23zZPszKwia637d0tBZhwcZSw788wtCn"/>
+                  <div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm border border-outline-variant/30">
+                    <span class="font-caption text-caption text-text-secondary uppercase block">Grubość stali</span>
+                    <span class="font-title-sm text-title-sm text-text-primary font-bold block">2.0-2.5 mm</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 pt-3 border-t border-outline-variant/30">
+                  <div>
+                    <span class="font-caption text-caption text-secondary uppercase font-semibold">Wykończenie</span>
+                    <p class="font-label-sm text-label-sm text-on-surface font-bold mt-0.5">Lakier proszkowy RAL</p>
+                  </div>
+                  <div>
+                    <span class="font-caption text-caption text-secondary uppercase font-semibold">Trzonek</span>
+                    <p class="font-label-sm text-label-sm text-on-surface font-bold mt-0.5">Ergonomiczny stal / jesion</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Catalog Section (Dynamic Asymmetric Technical Showcase) -->
+      <section class="w-full py-space-3xl bg-surface" id="produkty">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-6 border-b border-outline-variant/30 pb-6">
+            <div class="max-w-2xl">
+              <h2 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-text-primary font-bold tracking-tight">
+                4 rodziny narzędzi stalowych STEEL GARDEN
+              </h2>
+              <p class="font-body-md text-body-md text-text-secondary mt-2 leading-relaxed max-w-xl">
+                Wszystkie narzędzia produkujemy sami w Rzeszotarach. Ze stali konstrukcyjnej i hartowanej, z linii STEEL GARDEN. Dostawy realizujemy bezpośrednio dla hurtowni, sieci handlowych i dystrybucji.
+              </p>
+            </div>
+            <a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary font-bold hover:text-primary-container transition-colors shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded p-1" href="#kontakt-formularz">
+              <span>Zapytaj o ofertę hurtową</span>
+              <i class="ph-bold ph-arrow-right text-base" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Dynamic Asymmetric Technical Layout (Flagship Showcase + Modular Grid) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            
+            <!-- Flagship Big Showcase: Szpadle & Łopaty Stalowe C45 (lg:col-span-7) -->
+            <div class="lg:col-span-7 flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow border border-outline-variant/40">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                  <div class="flex items-center gap-2">
+                    <span class="spec-badge bg-primary-fixed text-on-primary-fixed border-primary/20">
+                      <i class="ph-bold ph-star text-primary" aria-hidden="true"></i>
+                      Linia Flagowa
+                    </span>
+                    <span class="spec-badge">Stal Hartowana C45</span>
+                  </div>
+                  <span class="font-caption text-caption text-text-secondary font-semibold">Grubość: 2.0-2.5 mm</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                  <div class="relative h-64 rounded-xl bg-surface-subtle flex items-center justify-center overflow-hidden border border-outline-variant/30">
+                    <img loading="lazy" decoding="async" class="object-contain w-full h-full p-4" alt="Szpadel ostry i prosty POMI z krawędzią do podcinania darni" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM6JG0lNvxYdBuJAT5lqOPzAtpGPLjD29jnOg71R-owN-LorFP9AfltMGyFN1CumEh6iMAUkru79Vgesdb4LrTLsA9mu1Ocedf2CfWOPN46eJ7-_-ckLmwp7uHgm25Qxp4uPtckbV045QptaHXY1mLB-6L_ixfsFsa36XHZ2h1EWYKwSWUEqoIRBrUOyz-1HWgWP2TVVoRS-Ee-ruQeDQOqx5m8DLxkBWLkZ-popw53mLUMAhxhhDg"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <h3 class="font-headline-md text-headline-md text-text-primary font-bold">Szpadle i Łopaty stalowe</h3>
+                    <p class="font-body-sm text-body-sm text-text-secondary mt-2 leading-relaxed">
+                      Zaprojektowane do intensywnych robót ziemnych, wykopów oraz przeładunku kruszywa. Posiadają głębokie przetłoczenie sztychu oraz szeroką stopkę podparcia buta.
+                    </p>
+                    
+                    <div class="mt-4 space-y-2 border-t border-outline-variant/30 pt-3">
+                      <div class="flex items-center justify-between text-caption font-caption">
+                        <span class="text-text-secondary">Warianty szpadli:</span>
+                        <strong class="text-text-primary font-bold">Ostry (darniowy) oraz prosty</strong>
+                      </div>
+                      <div class="flex items-center justify-between text-caption font-caption">
+                        <span class="text-text-secondary">Wzmocnienie sztychu:</span>
+                        <strong class="text-primary font-bold">Przetłoczenie wzdłużne</strong>
+                      </div>
+                      <div class="flex items-center justify-between text-caption font-caption">
+                        <span class="text-text-secondary">Rękojeść:</span>
+                        <strong class="text-text-primary font-bold">Profilowana DY stal / tworzywo</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+                <span class="font-caption text-caption text-text-secondary">Dostępne w partiach paletowych EURO</span>
+                <a class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded p-1" href="#kontakt-formularz">
+                  <span>Zapytaj o ofertę hurtową</span>
+                  <i class="ph-bold ph-arrow-right text-base" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Side Cards Column: Widły & Świdry (lg:col-span-5) -->
+            <div class="lg:col-span-5 flex flex-col gap-gutter">
+              
+              <!-- Card: Widły Gospodarcze -->
+              <div class="group flex flex-col sm:flex-row bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow border border-outline-variant/40 gap-4 items-center">
+                <div class="relative w-full sm:w-36 h-36 rounded-xl bg-surface-subtle flex items-center justify-center overflow-hidden shrink-0 border border-outline-variant/30">
+                  <img loading="lazy" decoding="async" class="object-contain w-full h-full p-2" alt="Widły ogrodowe i gospodarcze POMI ze stali sprężynowej" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_7QdwYWCubz_JjHGCSpTQmQ1DY_xsghi4FdVgMXE1VFAzRFdlJDp9Colnwgqn84H3fAtJq1xH5J--lXSJvSqN3C375zcSRN2cz1DzWPaJhvblzClQTvEj2YhkPn-d6wX6fwatgqIBzB3sqRXraqDqpWmxtOSVn09nqA9WTdcRYFOpjTo62qxrVFqqWRHXGb4DAPFFx3CsPp0nOHJ3KPUzrCJllDTj_lBJPhhvSrEpI-q-_Yq1tZrd"/>
+                </div>
+                <div class="flex flex-col flex-grow">
+                  <div class="flex items-center justify-between">
+                    <span class="spec-badge">Stal Sprężynowa</span>
+                    <span class="font-caption text-caption text-text-secondary">4 zęby</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-1">Widły gospodarcze</h3>
+                  <p class="font-body-sm text-body-sm text-text-secondary mt-1">
+                    Kute zęby profilowane, odporne na odkształcenia. Spawana, wzmocniona tuleja mocowania.
+                  </p>
+                  <a class="mt-2 inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors" href="#kontakt-formularz">
+                    <span>Wycena partii wideł</span>
+                    <i class="ph-bold ph-caret-right text-sm" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card: Świdry do Gleby -->
+              <div class="group flex flex-col sm:flex-row bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow border border-outline-variant/40 gap-4 items-center">
+                <div class="relative w-full sm:w-36 h-36 rounded-xl bg-surface-subtle flex items-center justify-center overflow-hidden shrink-0 border border-outline-variant/30">
+                  <img loading="lazy" decoding="async" class="object-contain w-full h-full p-2" alt="Świder ręczny do gleby POMI z podwójnym ślimakiem stalowym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANb0Aouc4SdWYs7uNq_ow6lPu7dXyMAY2T-j6bjVCM6tsrQsqJvPP6rBnLnzjp4ht8GrAHKKlbh4sdy7lvIpiJbN3oX9AK_iPx9yFQCCMKTexWX9fRkZfVEwbFqhknJM_V1kIXHHskkZX67iS_PNRy89CYievp8diCjfa7swtVanL-U4_0HaPrhLOl-esEenzjieaevlbA2NBk4xk9gR-MabLkfG8V4WHOaowA9jAwobZ5Hkxjppzu"/>
+                </div>
+                <div class="flex flex-col flex-grow">
+                  <div class="flex items-center justify-between">
+                    <span class="spec-badge">Ślimak Dwuostrzowy</span>
+                    <span class="font-caption text-caption text-text-secondary">fi 100-250 mm</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-1">Świdry ręczne do gleby</h3>
+                  <p class="font-body-sm text-body-sm text-text-secondary mt-1">
+                    Dedykowane pod słupki ogrodzeniowe i sadzonki. Stabilna spawana rękojeść stalowa typu T.
+                  </p>
+                  <a class="mt-2 inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors" href="#kontakt-formularz">
+                    <span>Wycena partii świdrów</span>
+                    <i class="ph-bold ph-caret-right text-sm" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Private Label Quick Strip -->
+          <div class="mt-space-xl rounded-2xl bg-surface-container-high p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm border border-outline-variant/40">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                <i class="ph-bold ph-sparkle text-2xl text-on-primary" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Szukacie tych narzędzi pod własną marką?</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 max-w-md">Produkujemy serie OEM z logotypem klienta, indywidualną kolorystyką RAL i etykietowaniem EAN pod sieci handlowe.</p>
+              </div>
+            </div>
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container-lowest/80 transition-colors shadow-sm shrink-0 border border-outline-variant/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#marka-wlasna">
+              <span>Sprawdź ofertę marki własnej</span>
+              <i class="ph-bold ph-arrow-right text-base text-primary" aria-hidden="true"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Private Label Section (B2B Deep Dive - Unified Light Theme) -->
+      <section class="w-full py-space-3xl bg-surface-container-low border-y border-outline-variant/30 relative overflow-hidden" id="marka-wlasna">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            
+            <div class="lg:col-span-7">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary-fixed font-caption text-caption text-on-primary-fixed font-semibold mb-space-md border border-primary/20">
+                <i class="ph-bold ph-briefcase text-sm text-primary" aria-hidden="true"></i>
+                <span class="font-semibold tracking-wide">Private Label dla dystrybutorów i sieci handlowych</span>
+              </span>
+              <h2 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-text-primary font-bold tracking-tight">
+                Zbuduj własną linię narzędzi ogrodowych bez ponoszenia kosztów parku maszynowego
+              </h2>
+              <p class="font-body-lg text-body-lg text-text-secondary mt-space-md leading-relaxed">
+                Dla hurtowni, sieci marketów i dystrybutorów poszukujących sprawdzonego polskiego producenta narzędzi pod własną markę. Gwarantujemy powtarzalną jakość każdej partii, elastyczność specyfikacji i terminowość dostaw.
+              </p>
+              <div class="mt-space-lg flex flex-wrap gap-4">
+                <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#kontakt-formularz">
+                  <span>Skonsultuj produkcję OEM</span>
+                  <i class="ph-bold ph-arrow-right text-base" aria-hidden="true"></i>
+                </a>
+                <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-lowest text-text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors border border-outline-variant/40 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="tel:603679210">
+                  <i class="ph ph-phone text-primary text-lg" aria-hidden="true"></i>
+                  <span>Zadzwoń do technologa: 603 679 210</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col gap-4 mt-space-xl lg:mt-0">
+              <div class="rounded-xl bg-surface-container-lowest p-6 border border-outline-variant/40 shadow-sm">
+                <div class="flex items-start gap-4">
+                  <span class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                    <i class="ph-bold ph-sliders text-xl text-primary" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <h3 class="font-title-sm text-title-sm text-text-primary font-bold">1. Elastyczna specyfikacja techniczna</h3>
+                    <p class="font-body-sm text-body-sm text-text-secondary mt-1">Kształt ostrza, grubość stali, przetłoczenia wzmacniające, rodzaj trzonka (stal profilowana lub jesion) oraz paleta lakierowania proszkowego RAL.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-xl bg-surface-container-lowest p-6 border border-outline-variant/40 shadow-sm">
+                <div class="flex items-start gap-4">
+                  <span class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                    <i class="ph-bold ph-tag text-xl text-primary" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <h3 class="font-title-sm text-title-sm text-text-primary font-bold">2. Znakowanie i branding</h3>
+                    <p class="font-body-sm text-body-sm text-text-secondary mt-1">Twoje logo bezpośrednio na narzędziu, etykiety kodowe EAN dla sieci handlowych i zoptymalizowane pakowanie zbiorcze na palety EURO.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-xl bg-surface-container-lowest p-6 border border-outline-variant/40 shadow-sm">
+                <div class="flex items-start gap-4">
+                  <span class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                    <i class="ph-bold ph-factory text-xl text-primary" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <h3 class="font-title-sm text-title-sm text-text-primary font-bold">3. Gwarancja powtarzalności</h3>
+                    <p class="font-body-sm text-body-sm text-text-secondary mt-1">Produkcja we własnym zakładzie w Rzeszotarach pod Krakowem. Stały nadzór nad zgrzewami, tłoczeniem i obróbką cieplną bez pośredników.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Story & Company Profile -->
+      <section class="w-full py-space-3xl bg-surface-container-lowest" id="o-firmie">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            
+            <!-- Manufacturing Workshop Visual & Integrated Data Band -->
+            <div class="lg:col-span-6 flex flex-col gap-4">
+              <div class="relative rounded-2xl overflow-hidden shadow-lg bg-surface-container-high h-80 sm:h-96 border border-outline-variant/30">
+                <img loading="lazy" decoding="async" class="object-cover w-full h-full" alt="Hala produkcyjna POMI w Rzeszotarach z prasami do tłoczenia sztychów łopat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVtWkv7E1tPTkhAw2_jKNVldmsiothORONGJNRIfOpHxiz3TiqpHD05yfCKNEjxfgCwZzdH8SiE8Hf51oPmYFWZMTezXZHXU7s35OX1RB_ao9k06UwuFiRkB2anxSu-2vc-SA-qnQg6oca6vRUaZu9VPOJ4UIGINwVUOwUlHbRg2-QPJddsuv96rRz4aqiy0uSNbxS_NWM_O81nTgn1QvInQP5FiuDuZN99H2-fFmuq2wp5zkWmCnK"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-on-background/85 via-on-background/20 to-transparent flex items-end p-6">
+                  <div class="text-on-primary">
+                    <span class="font-caption text-caption uppercase tracking-wider text-primary-fixed font-bold">Zakład Produkcyjny POMI</span>
+                    <p class="font-headline-sm text-headline-sm font-bold mt-0.5">Rzeszotary, ul. Galicyjska 61</p>
+                    <p class="font-body-sm text-body-sm text-secondary-fixed">Własny park maszynowy: prasy tłoczące, zgrzewarki i malarnia proszkowa</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Integrated Industrial Data Strip -->
+              <div class="grid grid-cols-3 divide-x divide-outline-variant/30 bg-surface-container-low rounded-xl py-4 text-center border border-outline-variant/30">
+                <div class="px-2">
+                  <span class="font-caption text-caption text-text-secondary uppercase font-semibold block">Rok założenia</span>
+                  <span class="font-headline-sm text-headline-sm font-bold text-primary block mt-0.5">2011</span>
+                  <span class="font-caption text-caption text-text-secondary">Polska produkcja</span>
+                </div>
+                <div class="px-2">
+                  <span class="font-caption text-caption text-text-secondary uppercase font-semibold block">Doświadczenie</span>
+                  <span class="font-headline-sm text-headline-sm font-bold text-primary block mt-0.5">14 lat</span>
+                  <span class="font-caption text-caption text-text-secondary">W branży narzędzi</span>
+                </div>
+                <div class="px-2">
+                  <span class="font-caption text-caption text-text-secondary uppercase font-semibold block">Lokalizacja</span>
+                  <span class="font-headline-sm text-headline-sm font-bold text-primary block mt-0.5">Rzeszotary</span>
+                  <span class="font-caption text-caption text-text-secondary">K. Krakowa</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Copy -->
+            <div class="lg:col-span-6 flex flex-col items-start lg:pl-6 mt-space-lg lg:mt-0">
+              <h2 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-text-primary font-bold tracking-tight">
+                Narzędzia ze stali, które wytrzymują sezon po sezonie
+              </h2>
+              <p class="font-body-md text-body-md text-text-secondary mt-space-md leading-relaxed">
+                Działamy nieprzerwanie od 2011 roku w Rzeszotarach w powiecie krakowskim. Inwestujemy w technologię tłoczenia i obróbki stali, bo to one decydują o tym, czy narzędzie poradzi sobie w ciężkiej glinie i kruszywie.
+              </p>
+              <p class="font-body-md text-body-md text-text-secondary mt-space-sm leading-relaxed">
+                U nas nie ma bezosobowego biura obsługi ani wieloszczeblowego call center: dzwoniąc, rozmawiasz bezpośrednio z ludźmi odpowiedzialnymi za produkcję, kontrolę jakości i realizację dostaw.
+              </p>
+              
+              <!-- Company CTAs -->
+              <div class="mt-space-lg flex flex-wrap items-center gap-4">
+                <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#kontakt-formularz">
+                  <span>Skontaktuj się z zakładem</span>
+                  <i class="ph-bold ph-arrow-right text-base" aria-hidden="true"></i>
+                </a>
+                <a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary font-bold hover:text-primary-container transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded p-1" href="#produkty">
+                  <span>Zobacz parametry narzędzi</span>
+                  <i class="ph-bold ph-arrow-up-right text-base" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Direct Contact & Wholesale Inquiry Section -->
+      <section class="w-full py-space-3xl bg-surface-container-low" id="kontakt-formularz">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          
+          <div class="max-w-2xl mx-auto text-center mb-space-xl">
+            <h2 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-text-primary font-bold">
+              Zacznijmy współpracę hurtową
+            </h2>
+            <p class="font-body-md text-body-md text-text-secondary mt-2 max-w-lg mx-auto">
+              Szukasz stabilnego dostawcy narzędzi stalowych lub kalkulacji dla marki własnej? Skontaktuj się bezpośrednio z Michałem Popkiem.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            
+            <!-- Left: Contact Details Cards -->
+            <div class="lg:col-span-5 flex flex-col gap-4">
+              
+              <!-- Phone Primary Card -->
+              <a class="group flex items-center justify-between p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all border border-outline-variant/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="tel:603679210">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+                    <i class="ph-bold ph-phone text-2xl text-primary" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <span class="font-caption text-caption text-text-secondary uppercase block font-semibold">Zadzwoń bezpośrednio</span>
+                    <span class="font-title-md text-title-md font-bold text-text-primary group-hover:text-primary transition-colors">603 679 210</span>
+                    <span class="font-caption text-caption text-status-success block font-semibold">Michał Popek · Właściciel</span>
+                  </div>
+                </div>
+                <i class="ph-bold ph-arrow-right text-xl text-text-tertiary group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0" aria-hidden="true"></i>
+              </a>
+
+              <!-- Email Card -->
+              <a class="group flex items-center justify-between p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all border border-outline-variant/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="mailto:biuro@lopaty.eu">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+                    <i class="ph-bold ph-envelope-simple text-2xl text-primary" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <span class="font-caption text-caption text-text-secondary uppercase block font-semibold">Poczta elektronicczna</span>
+                    <span class="font-title-sm text-title-sm font-bold text-text-primary group-hover:text-primary transition-colors">biuro@lopaty.eu</span>
+                    <span class="font-caption text-caption text-text-secondary block">Wyceny hurtowe i specyfikacje OEM</span>
+                  </div>
+                </div>
+                <i class="ph-bold ph-arrow-right text-xl text-text-tertiary group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0" aria-hidden="true"></i>
+              </a>
+
+              <!-- Address & Hours Card with Google Maps Embed -->
+              <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4 border border-outline-variant/40">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+                    <i class="ph-bold ph-map-pin text-2xl text-primary" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <span class="font-caption text-caption text-text-secondary uppercase block font-semibold">Siedziba i produkcja</span>
+                    <p class="font-title-sm text-title-sm font-bold text-text-primary">POMI Michał Popek</p>
+                    <p class="font-body-sm text-body-sm text-text-secondary">ul. Galicyjska 61, 32-040 Rzeszotary (powiat krakowski)</p>
+                  </div>
+                </div>
+                
+                <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+                  <div class="flex items-center gap-2 text-on-surface">
+                    <i class="ph ph-clock text-primary text-base" aria-hidden="true"></i>
+                    <span class="font-label-sm text-label-sm font-bold">Godziny pracy:</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-text-secondary font-medium">Pn-Pt: 07:00-17:00</span>
+                </div>
+
+                <!-- Google Maps Embed Container -->
+                <div class="relative w-full h-56 sm:h-64 rounded-xl overflow-hidden border border-outline-variant/30 shadow-inner">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.2184604174554!2d19.997280999999997!3d49.932241999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471669e41664673d%3A0xdcde6932ab11e99e!2sPOMI%20Producent%20narz%C4%99dzi%20ogrodowych!5e0!3m2!1spl!2spl!4v1789480131355!5m2!1spl!2spl" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Lokalizacja zakładu POMI w Rzeszotarach na Mapach Google"></iframe>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Accessible Inquiry Form Card -->
+            <div class="lg:col-span-7 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm border border-outline-variant/40">
+              <h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">Szybkie zapytanie o cennik hurtowy</h3>
+              <p class="font-body-sm text-body-sm text-text-secondary mt-1 max-w-md">Wypełnij krótki formularz, oddzwonimy z konkretnymi warunkami i dostępnością partii.</p>
+              
+              <!-- Inline Success Notification Box with ARIA Live -->
+              <div id="form-success-msg" role="status" aria-live="polite" class="hidden my-4 p-4 rounded-xl bg-primary-fixed text-on-primary-fixed border border-primary/30 flex items-center gap-3">
+                <i class="ph-bold ph-check-circle text-2xl text-primary shrink-0" aria-hidden="true"></i>
+                <span class="font-body-sm text-body-sm font-semibold">Dziękujemy za zapytanie. Skontaktujemy się niezwłocznie w celu przedstawienia oferty.</span>
+              </div>
+
+              <form id="inquiry-form" class="mt-6 flex flex-col gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block font-label-sm text-label-sm text-text-primary mb-1">
+                      Imię i nazwisko / Firma <span class="text-status-warning">*</span>
+                    </label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" required class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-secondary border border-outline-variant/50 focus:border-primary focus:bg-surface-pure focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="np. Jan Kowalski, Hurtownia Rolnicza"/>
+                  </div>
+                  <div>
+                    <label for="contact-phone" class="block font-label-sm text-label-sm text-text-primary mb-1">
+                      Numer telefonu <span class="text-status-warning">*</span>
+                    </label>
+                    <input id="contact-phone" name="phone" type="tel" autocomplete="tel" required class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-secondary border border-outline-variant/50 focus:border-primary focus:bg-surface-pure focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="np. 600 000 000"/>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-email" class="block font-label-sm text-label-sm text-text-primary mb-1">
+                      Adres e-mail
+                    </label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-secondary border border-outline-variant/50 focus:border-primary focus:bg-surface-pure focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="adres@firma.pl"/>
+                  </div>
+                  <div>
+                    <label for="contact-type" class="block font-label-sm text-label-sm text-text-primary mb-1">
+                      Rodzaj współpracy
+                    </label>
+                    <select id="contact-type" name="cooperation_type" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm border border-outline-variant/50 focus:border-primary focus:bg-surface-pure focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
+                      <option value="steel-garden">Zamówienie hurtowe: linia STEEL GARDEN</option>
+                      <option value="private-label">Produkcja pod marką własną (Private Label)</option>
+                      <option value="distribution">Dystrybucja regionalna / sieć marketów</option>
+                      <option value="technical">Inne zapytanie techniczne</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block font-label-sm text-label-sm text-text-primary mb-1">
+                    Wiadomość / Szacowane wolumeny
+                  </label>
+                  <textarea id="contact-message" name="message" rows="3" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-secondary border border-outline-variant/50 focus:border-primary focus:bg-surface-pure focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none" placeholder="Opisz swoje zapotrzebowanie (np. 200 szt. szpadli ostrych, dostawa kwartalna na paletach)..."></textarea>
+                </div>
+
+                <div class="flex items-start gap-3 mt-1">
+                  <input id="consent" name="consent" type="checkbox" required class="mt-1 w-4 h-4 rounded text-primary border-outline-variant focus:ring-2 focus:ring-primary/30 accent-primary"/>
+                  <label for="consent" class="font-caption text-caption text-text-secondary leading-snug cursor-pointer">
+                    Wyrażam zgodę na przetwarzanie podanych danych w celu przygotowania kalkulacji i kontaktu handlowego przez POMI Michał Popek.
+                  </label>
+                </div>
+
+                <button type="submit" class="mt-2 w-full sm:w-auto self-start px-8 py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-sm inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                  <span>Wyślij zapytanie o ofertę</span>
+                  <i class="ph-bold ph-paper-plane-tilt text-base" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-surface-container-low border-t border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-space-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+      
+      <!-- Column 1: Company Profile & Registry -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.webp" alt="POMI" class="h-8 sm:h-9 w-auto object-contain" width="110" height="36"/>
+          <span class="px-2 py-0.5 rounded bg-surface-variant font-caption text-caption text-on-surface-variant uppercase font-semibold">Od 2011</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Polski producent profesjonalnych narzędzi ogrodowych ze stali. Trwałość, ergonomia i powtarzalność: seria STEEL GARDEN oraz dedykowana produkcja OEM pod marką klienta.
         </p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-<!-- Left: Contact Details Cards -->
-<div class="lg:col-span-5 flex flex-col gap-4">
-<!-- Phone Primary Card -->
-<a class="group flex items-center justify-between p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all border border-outline-variant/20" href="tel:603679210">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-<span class="material-symbols-outlined text-[24px]">call</span>
-</div>
-<div>
-<span class="font-caption text-caption text-text-secondary uppercase block font-semibold">Zadzwoń bezpośrednio</span>
-<span class="font-title-md text-title-md font-bold text-text-primary group-hover:text-primary transition-colors">603 679 210</span>
-<span class="font-caption text-caption text-status-success block">Michał Popek · Właściciel</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-text-tertiary group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
-</a>
-<!-- Email Card -->
-<a class="group flex items-center justify-between p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all border border-outline-variant/20" href="mailto:biuro@lopaty.eu">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-<span class="material-symbols-outlined text-[24px]">mail</span>
-</div>
-<div>
-<span class="font-caption text-caption text-text-secondary uppercase block font-semibold">Poczta elektroniczna</span>
-<span class="font-title-sm text-title-sm font-bold text-text-primary group-hover:text-primary transition-colors">biuro@lopaty.eu</span>
-<span class="font-caption text-caption text-text-secondary block">Wyceny hurtowe i specyfikacje OEM</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-text-tertiary group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
-</a>
-<!-- Address & Hours Card -->
-<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4 border border-outline-variant/20">
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
-<span class="material-symbols-outlined text-[24px]">location_on</span>
-</div>
-<div>
-<span class="font-caption text-caption text-text-secondary uppercase block font-semibold">Siedziba i produkcja</span>
-<p class="font-title-sm text-title-sm font-bold text-text-primary">POMI Michał Popek</p>
-<p class="font-body-sm text-body-sm text-text-secondary">ul. Galicyjska 61, 32-040 Rzeszotary (powiat krakowski)</p>
-</div>
-</div>
-<div class="pt-4 bg-surface-subtle rounded-xl p-4 flex items-center justify-between">
-<div class="flex items-center gap-2 text-on-surface">
-<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
-<span class="font-label-sm text-label-sm font-bold">Godziny pracy:</span>
-</div>
-<span class="font-label-sm text-label-sm text-text-secondary">Pon – Pt: 07:00 – 17:00</span>
-</div>
-</div>
-</div>
-<!-- Right: Inquiry Form Card -->
-<div class="lg:col-span-7 bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/20">
-<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">Szybkie zapytanie o cennik hurtowy</h3>
-<p class="font-body-sm text-body-sm text-text-secondary mt-1">Wypełnij krótki formularz, oddzwonimy z konkretnymi warunkami i dostępnością partii.</p>
-<form class="mt-6 flex flex-col gap-4" onsubmit="event.preventDefault(); alert('Dziękujemy za zapytanie. Skontaktujemy się niezwłocznie.');">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div>
-<label class="block font-label-sm text-label-sm text-text-primary mb-1">Imię i nazwisko / Firma *</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-tertiary focus:outline-none focus:bg-surface-pure focus:ring-1 focus:ring-primary-container transition-colors" placeholder="np. Jan Kowalski, Hurtownia Rolnicza" required="" type="text"/>
-</div>
-<div>
-<label class="block font-label-sm text-label-sm text-text-primary mb-1">Numer telefonu *</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-tertiary focus:outline-none focus:bg-surface-pure focus:ring-1 focus:ring-primary-container transition-colors" placeholder="np. 600 000 000" required="" type="tel"/>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div>
-<label class="block font-label-sm text-label-sm text-text-primary mb-1">Adres e-mail</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-tertiary focus:outline-none focus:bg-surface-pure focus:ring-1 focus:ring-primary-container transition-colors" placeholder="adres@firma.pl" type="email"/>
-</div>
-<div>
-<label class="block font-label-sm text-label-sm text-text-primary mb-1">Rodzaj współpracy</label>
-<select class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-pure focus:ring-1 focus:ring-primary-container transition-colors">
-<option>Zamówienie hurtowe — linia STEEL GARDEN</option>
-<option>Produkcja pod marką własną (Private Label)</option>
-<option>Dystrybucja regionalna / sieć marketów</option>
-<option>Inne zapytanie techniczne</option>
-</select>
-</div>
-</div>
-<div>
-<label class="block font-label-sm text-label-sm text-text-primary mb-1">Wiadomość / Szacowane wolumeny</label>
-<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-text-primary font-body-sm text-body-sm placeholder:text-text-tertiary focus:outline-none focus:bg-surface-pure focus:ring-1 focus:ring-primary-container transition-colors resize-none" placeholder="Opisz swoje zapotrzebowanie (np. 200 szt. szpadli ostrych, dostawa kwartalna)..." rows="3"></textarea>
-</div>
-<div class="flex items-center gap-3">
-<input class="w-4 h-4 rounded text-primary-container focus:ring-0 accent-primary-container" id="consent" required="" type="checkbox"/>
-<label class="font-caption text-caption text-text-secondary" for="consent">
-                Wyrażam zgodę na kontakt w celu przygotowania wyceny handlowej narzędzi POMI.
-              </label>
-</div>
-<button class="mt-2 w-full sm:w-auto self-start px-8 py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-sm inline-flex items-center justify-center gap-2" type="submit">
-<span>Wyślij zapytanie o wycenę</span>
-<span class="material-symbols-outlined text-[18px]">send</span>
-</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-</div></main><footer class="w-full bg-surface-container-low mt-space-3xl border-t border-outline-variant/30"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"><div class="flex flex-col gap-3"><div class="flex items-center gap-3"><div class="w-7 h-7 rounded bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs">P</div><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight uppercase">POMI</span><span class="px-2 py-0.5 rounded bg-surface-variant font-caption text-caption text-on-surface-variant uppercase">Est. 2011</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Producent profesjonalnych narzędzi ogrodowych ze stali. Inżynieria ergonomii i trwałości — linia STEEL GARDEN oraz dedykowana produkcja OEM/Private Label dla sieci handlowych.</p><p class="font-label-sm text-label-sm text-on-surface font-semibold mt-1">Michał Popek<br/><span class="font-normal text-on-surface-variant">Galicyjska 61, 32-040 Rzeszotary</span></p></div><div class="flex flex-col gap-2.5"><h4 class="font-title-sm text-title-sm text-on-surface mb-1 font-bold">Katalog produktów</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Łopaty ogrodowe i budowlane</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Szpadle ostre i proste</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Widły gospodarcze i ogrodowe</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Świdry do gleby i sadzenia</a><a class="font-body-sm text-body-sm text-primary font-medium hover:underline transition-colors mt-1" href="#">Pobierz katalog PDF →</a></div><div class="flex flex-col gap-2.5"><h4 class="font-title-sm text-title-sm text-on-surface mb-1 font-bold">Dla partnerów B2B</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Produkcja OEM / Marka własna</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Znakowanie i kolorystyka RAL</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Warunki dostaw i logistyka hurtowa</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">O firmie i parku maszynowym</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Centrum certyfikatów stali</a></div><div class="flex flex-col gap-3 rounded-xl bg-surface-container-lowest p-5 shadow-[0_1px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20"><h4 class="font-title-sm text-title-sm text-on-surface font-bold">Dział zamówień hurtowych</h4><div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[20px] mt-0.5">call</span><div><span class="font-caption text-caption text-secondary uppercase block">Infolinia handlowa</span><a class="font-title-md text-title-md font-bold text-on-surface hover:text-primary transition-colors" href="tel:603679210">603 679 210</a></div></div><div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[20px] mt-0.5">mail</span><div><span class="font-caption text-caption text-secondary uppercase block">Pytania ofertowe</span><a class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary transition-colors" href="mailto:biuro@lopaty.eu">biuro@lopaty.eu</a></div></div><div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[20px] mt-0.5">schedule</span><div><span class="font-caption text-caption text-secondary uppercase block">Godziny pracy</span><span class="font-body-sm text-body-sm text-on-surface-variant">Poniedziałek – Piątek: 07:00 – 17:00</span></div></div></div></div><div class="bg-surface-container"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><p class="text-center md:text-left">© 2011–2025 POMI Michał Popek. Polska produkcja narzędzi ogrodowych ze stali. Narzędzia z linii STEEL GARDEN oraz produkcja OEM/Private Label.</p><div class="flex items-center gap-6 shrink-0 font-label-sm text-label-sm"><span class="text-secondary">Rzeszotary k. Krakowa</span><a class="hover:text-on-surface transition-colors" href="#">Polityka prywatności</a><a class="hover:text-on-surface transition-colors" href="#">Nota prawna</a></div></div></div></footer></body></html>
+        <div class="font-body-sm text-body-sm text-on-surface mt-1">
+          <strong>POMI Michał Popek</strong><br/>
+          <span class="text-on-surface-variant">ul. Galicyjska 61, 32-040 Rzeszotary</span><br/>
+          <span class="text-caption font-caption text-secondary">NIP: 9442069447 · REGON: 121992491</span>
+        </div>
+      </div>
+
+      <!-- Column 2: Products Links -->
+      <div class="flex flex-col gap-2.5">
+        <h4 class="font-title-sm text-title-sm text-on-surface mb-1 font-bold">Katalog produktów</h4>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#produkty">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Łopaty ogrodowe i budowlane</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#produkty">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Szpadle ostre i proste C45</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#produkty">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Widły gospodarcze sprężynowe</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#produkty">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Świdry ręczne do gleby</span>
+        </a>
+        <a class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-primary font-semibold hover:underline transition-colors mt-1" href="#kontakt-formularz">
+          <i class="ph-bold ph-file-arrow-down text-base" aria-hidden="true"></i>
+          <span>Zapytaj o katalog PDF</span>
+        </a>
+      </div>
+
+      <!-- Column 3: B2B Offer Links -->
+      <div class="flex flex-col gap-2.5">
+        <h4 class="font-title-sm text-title-sm text-on-surface mb-1 font-bold">Dla partnerów B2B</h4>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#marka-wlasna">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Produkcja OEM / Private Label</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#marka-wlasna">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Znakowanie i paleta lakierów RAL</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#o-firmie">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Własny zakład i park maszynowy</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#kontakt-formularz">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Warunki dostaw i logistyka hurtowa</span>
+        </a>
+        <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#kontakt-formularz">
+          <i class="ph-bold ph-caret-right text-xs text-text-tertiary group-hover:text-primary group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
+          <span>Zamówienie partii próbnej</span>
+        </a>
+      </div>
+
+      <!-- Column 4: Quick Contact Box -->
+      <div class="flex flex-col gap-3">
+        <h4 class="font-title-sm text-title-sm text-on-surface font-bold">Dział zamówień hurtowych</h4>
+        
+        <div class="flex items-start gap-2.5">
+          <i class="ph-bold ph-phone text-primary text-xl mt-0.5" aria-hidden="true"></i>
+          <div>
+            <span class="font-caption text-caption text-secondary uppercase block font-semibold">Infolinia handlowa</span>
+            <a class="font-title-md text-title-md font-bold text-on-surface hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" href="tel:603679210">603 679 210</a>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-2.5">
+          <i class="ph-bold ph-envelope-simple text-primary text-xl mt-0.5" aria-hidden="true"></i>
+          <div>
+            <span class="font-caption text-caption text-secondary uppercase block font-semibold">Pytania ofertowe</span>
+            <a class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" href="mailto:biuro@lopaty.eu">biuro@lopaty.eu</a>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-2.5">
+          <i class="ph-bold ph-clock text-primary text-xl mt-0.5" aria-hidden="true"></i>
+          <div>
+            <span class="font-caption text-caption text-secondary uppercase block font-semibold">Godziny pracy</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Pn-Pt: 07:00-17:00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="border-t border-outline-variant/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-5 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant">
+        <p class="text-center md:text-left max-w-md leading-relaxed">
+          © 2011-2026 POMI Michał Popek. Polska produkcja narzędzi ogrodowych ze stali. Seria STEEL GARDEN oraz OEM/Private Label.
+        </p>
+        <div class="flex items-center gap-6 shrink-0 font-label-sm text-label-sm">
+          <span class="text-secondary">Rzeszotary k. Krakowa</span>
+          <a class="inline-flex items-center gap-1 hover:text-on-surface transition-colors" href="#top">
+            <span>Na górę</span>
+            <i class="ph-bold ph-arrow-up text-sm" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    (function () {
+      // Mobile navigation drawer logic
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuOpenIcon = document.getElementById('menu-open-icon');
+      const menuCloseIcon = document.getElementById('menu-close-icon');
+      const navLinks = document.querySelectorAll('.mobile-nav-link');
+      const form = document.getElementById('inquiry-form');
+      const successMsg = document.getElementById('form-success-msg');
+
+      function toggleMenu() {
+        const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', !isExpanded);
+        
+        if (isExpanded) {
+          mobileMenu.classList.add('hidden');
+          if (menuOpenIcon) menuOpenIcon.classList.remove('hidden');
+          if (menuCloseIcon) menuCloseIcon.classList.add('hidden');
+        } else {
+          mobileMenu.classList.remove('hidden');
+          if (menuOpenIcon) menuOpenIcon.classList.add('hidden');
+          if (menuCloseIcon) menuCloseIcon.classList.remove('hidden');
+        }
+      }
+
+      function closeMenu() {
+        menuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+        if (menuOpenIcon) menuOpenIcon.classList.remove('hidden');
+        if (menuCloseIcon) menuCloseIcon.classList.add('hidden');
+      }
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // Close on navigation link click
+        navLinks.forEach(link => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            closeMenu();
+          }
+        });
+      }
+
+      // Handle Inquiry Form Submission
+      if (form && successMsg) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          successMsg.classList.remove('hidden');
+          form.reset();
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
