@@ -1,0 +1,121 @@
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chivo', sans-serif;
+    text-wrap: balance;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Emil Kowalski - Design Engineering / Craft Motion System
+   ========================================================================== */
+
+:root {
+  --ease-emil-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Tactile button press feedback */
+#mobile-menu-btn {
+  transition: transform 140ms var(--ease-emil-out), background-color 140ms ease;
+  transform-origin: center;
+}
+#mobile-menu-btn:active {
+  transform: scale(0.92);
+}
+
+/* Press feedback for mobile nav items */
+.mobile-nav-link {
+  transition: transform 140ms var(--ease-emil-out), background-color 140ms ease;
+  transform-origin: left center;
+}
+.mobile-nav-link:active {
+  transform: scale(0.98);
+}
+
+/* Scroll Lock */
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* GPU-accelerated Keyframe Animations */
+@keyframes emilMenuEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.985) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes emilItemStagger {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes emilBackdropFade {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(6px);
+  }
+}
+
+#mobile-menu:not(.hidden) {
+  transform-origin: top center;
+  animation: emilMenuEnter 220ms var(--ease-emil-out) forwards;
+}
+
+#mobile-menu:not(.hidden) .mobile-nav-link,
+#mobile-menu:not(.hidden) .mobile-contact-card {
+  opacity: 0;
+  animation: emilItemStagger 240ms var(--ease-emil-out) forwards;
+}
+
+/* Stagger Delays (35ms step - fast, perceptible cascade) */
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(1) { animation-delay: 30ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(2) { animation-delay: 65ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(3) { animation-delay: 100ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(4) { animation-delay: 135ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(5) { animation-delay: 170ms; }
+#mobile-menu:not(.hidden) .mobile-contact-card { animation-delay: 205ms; }
+
+#mobile-menu-backdrop:not(.hidden) {
+  animation: emilBackdropFade 200ms var(--ease-emil-out) forwards;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  #mobile-menu:not(.hidden),
+  #mobile-menu:not(.hidden) .mobile-nav-link,
+  #mobile-menu:not(.hidden) .mobile-contact-card,
+  #mobile-menu-backdrop:not(.hidden) {
+    animation: emilBackdropFade 150ms ease forwards !important;
+    transform: none !important;
+  }
+}
+
+
+
