@@ -23,6 +23,7 @@
 
 :root {
   --ease-emil-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-emil-in: cubic-bezier(0.32, 0, 0.67, 0);
 }
 
 /* Tactile button press feedback */
@@ -31,7 +32,7 @@
   transform-origin: center;
 }
 #mobile-menu-btn:active {
-  transform: scale(0.92);
+  transform: scale(0.95);
 }
 
 /* Press feedback for mobile nav items */
@@ -40,6 +41,18 @@
   transform-origin: left center;
 }
 .mobile-nav-link:active {
+  transform: scale(0.98);
+}
+
+/* Tactile feedback for desktop action buttons and form submits */
+.btn-tactile,
+button[type="submit"],
+.cta-primary {
+  transition: transform 140ms var(--ease-emil-out), background-color 140ms ease, box-shadow 140ms ease;
+}
+.btn-tactile:active,
+button[type="submit"]:active,
+.cta-primary:active {
   transform: scale(0.98);
 }
 
@@ -58,6 +71,17 @@ body.menu-open {
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes emilMenuExit {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.985) translateY(-6px);
   }
 }
 
@@ -83,9 +107,26 @@ body.menu-open {
   }
 }
 
-#mobile-menu:not(.hidden) {
+@keyframes emilBackdropExit {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(6px);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+}
+
+#mobile-menu:not(.hidden):not(.closing) {
   transform-origin: top center;
   animation: emilMenuEnter 220ms var(--ease-emil-out) forwards;
+}
+
+#mobile-menu.closing {
+  transform-origin: top center;
+  animation: emilMenuExit 160ms var(--ease-emil-out) forwards;
+  pointer-events: none;
 }
 
 #mobile-menu:not(.hidden) .mobile-nav-link,
@@ -94,16 +135,29 @@ body.menu-open {
   animation: emilItemStagger 240ms var(--ease-emil-out) forwards;
 }
 
-/* Stagger Delays (35ms step - fast, perceptible cascade) */
-#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(1) { animation-delay: 30ms; }
-#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(2) { animation-delay: 65ms; }
-#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(3) { animation-delay: 100ms; }
-#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(4) { animation-delay: 135ms; }
-#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(5) { animation-delay: 170ms; }
-#mobile-menu:not(.hidden) .mobile-contact-card { animation-delay: 205ms; }
+/* Stagger Delays (fast, perceptible cascade starting at 0ms) */
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(1) { animation-delay: 0ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(2) { animation-delay: 35ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(3) { animation-delay: 70ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(4) { animation-delay: 105ms; }
+#mobile-menu:not(.hidden) nav .mobile-nav-link:nth-child(5) { animation-delay: 140ms; }
+#mobile-menu:not(.hidden) .mobile-contact-card { animation-delay: 175ms; }
 
-#mobile-menu-backdrop:not(.hidden) {
+#mobile-menu-backdrop:not(.hidden):not(.closing) {
   animation: emilBackdropFade 200ms var(--ease-emil-out) forwards;
+}
+
+#mobile-menu-backdrop.closing {
+  animation: emilBackdropExit 160ms var(--ease-emil-out) forwards;
+  pointer-events: none;
+}
+
+/* Touch device protection: prevent sticky hovers on touch screens */
+@media (hover: none) and (pointer: coarse) {
+  .group:hover .group-hover\:translate-x-1,
+  .group:hover .group-hover\:translate-x-0\.5 {
+    transform: none !important;
+  }
 }
 
 /* Accessibility: Reduced Motion */
@@ -111,11 +165,17 @@ body.menu-open {
   #mobile-menu:not(.hidden),
   #mobile-menu:not(.hidden) .mobile-nav-link,
   #mobile-menu:not(.hidden) .mobile-contact-card,
-  #mobile-menu-backdrop:not(.hidden) {
+  #mobile-menu-backdrop:not(.hidden),
+  #mobile-menu.closing,
+  #mobile-menu-backdrop.closing {
     animation: emilBackdropFade 150ms ease forwards !important;
     transform: none !important;
   }
+  .btn-tactile:active,
+  button[type="submit"]:active,
+  .cta-primary:active,
+  #mobile-menu-btn:active,
+  .mobile-nav-link:active {
+    transform: none !important;
+  }
 }
-
-
-
