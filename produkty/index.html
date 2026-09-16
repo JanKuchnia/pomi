@@ -255,58 +255,626 @@
 
   <div id="mobile-menu-backdrop" class="hidden fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-40 lg:hidden" aria-hidden="true"></div>
 
-  <main class="w-full pt-28 lg:pt-30 min-h-screen" id="main-content">
-    <div class="flex flex-col w-full">
-      <section class="w-full py-space-3xl bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div class="max-w-3xl">
-          <h1 class="font-headline-lg text-headline-lg-mobile sm:text-display-xl text-slate-950 font-bold tracking-tight mb-space-md">Katalog produktów</h1>
+  <main class="w-full pt-28 lg:pt-32 min-h-screen bg-slate-50" id="main-content">
+    <!-- Breadcrumbs & Header -->
+    <section class="w-full bg-white border-b border-slate-200 py-space-xl sm:py-space-2xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <nav aria-label="Ścieżka powrotu" class="mb-4">
+          <ol class="flex items-center gap-2 font-caption text-caption text-slate-600">
+            <li>
+              <a href="../index.html" class="hover:text-primary transition-colors flex items-center gap-1">
+                <i class="ph ph-house text-sm" aria-hidden="true"></i>
+                <span>Strona główna</span>
+              </a>
+            </li>
+            <li aria-hidden="true" class="text-slate-400">/</li>
+            <li class="text-slate-900 font-semibold" aria-current="page">Katalog produktów</li>
+          </ol>
+        </nav>
 
-          <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mb-space-sm">Cztery kategorie narzędzi ogrodowych, wszystkie robione u nas, w Rzeszotarach. Ze stali, z linii STEEL GARDEN.</p>
+        <div class="max-w-3xl">
+          <span class="block text-slate-500 font-medium text-sm sm:text-base mb-2">
+            Oferta fabryczna POMI · Narzędzia ze stali
+          </span>
+          <h1 class="font-headline-lg text-headline-lg-mobile sm:text-display-xl text-slate-950 font-bold tracking-tight">
+            Katalog narzędzi ogrodowych ze stali
+          </h1>
+          <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mt-space-sm max-w-xl">
+            Katalog modeli narzędzi stalowych z zakładu w Rzeszotarach.
+            Realizujemy dostawy paletowe EURO oraz serie pod marką własną klienta.
+          </p>
+        </div>
 
-          <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mb-space-sm">Nie prowadzimy sprzedaży online — po wycenę i dostępność zadzwoń lub napisz: <a class="text-primary font-semibold hover:underline" href="../kontakt/index.html">kontakt →</a></p>
-
+        <!-- B2B Wholesale Notice Strip (Clean Section Footer Border, No Card-in-Card) -->
+        <div class="mt-8 pt-6 border-t border-slate-200 flex items-start sm:items-center justify-between flex-wrap gap-4 text-slate-800 font-body-sm text-body-sm">
+          <div class="flex items-center gap-2.5">
+            <i class="ph-bold ph-truck text-primary text-2xl shrink-0" aria-hidden="true"></i>
+            <div>
+              <strong class="text-slate-950">Dystrybucja hurtowa i serie paletowe:</strong>
+              <span class="text-slate-700 ml-1">Minimalna partia: 1 paleta EURO (50–120 szt. zależnie od modelu). Bez sprzedaży detalicznej online.</span>
+            </div>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter mt-space-lg">
-          <div class="flex flex-col bg-white rounded-2xl p-6 border border-slate-200">
-            <h2 class="font-headline-sm text-headline-sm text-slate-950 font-bold">Łopaty</h2>
-            <p class="font-body-sm text-body-sm text-slate-700 mt-2 leading-relaxed">Do kopania, przerzucania, prac ziemnych w ogrodzie i na działce.</p>
-            <a class="mt-3 inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors" href="lopaty/index.html">
-              <span>Zobacz łopaty →</span>
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="tel:603679210" class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-slate-900 font-bold hover:text-primary transition-colors">
+              <i class="ph-bold ph-phone text-primary" aria-hidden="true"></i>
+              <span>603 679 210</span>
             </a>
-          </div>
-
-          <div class="flex flex-col bg-white rounded-2xl p-6 border border-slate-200">
-            <h2 class="font-headline-sm text-headline-sm text-slate-950 font-bold">Szpadle</h2>
-            <p class="font-body-sm text-body-sm text-slate-700 mt-2 leading-relaxed">Do cięcia darni, przekopywania rabat, precyzyjnej pracy przy roślinach.</p>
-            <a class="mt-3 inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors" href="szpadle/index.html">
-              <span>Zobacz szpadle →</span>
+            <span class="text-slate-300">|</span>
+            <a href="../kontakt/index.html" class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors">
+              <span>Wycena partii w 24h</span>
+              <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>
             </a>
-          </div>
-
-          <div class="flex flex-col bg-white rounded-2xl p-6 border border-slate-200">
-            <h2 class="font-headline-sm text-headline-sm text-slate-950 font-bold">Widły</h2>
-            <p class="font-body-sm text-body-sm text-slate-700 mt-2 leading-relaxed">Do przerzucania kompostu, obornika, ściółki, prac w ogrodzie i gospodarstwie.</p>
-            <a class="mt-3 inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors" href="widly/index.html">
-              <span>Zobacz widły →</span>
-            </a>
-          </div>
-
-          <div class="flex flex-col bg-white rounded-2xl p-6 border border-slate-200">
-            <h2 class="font-headline-sm text-headline-sm text-slate-950 font-bold">Świdry do gleby</h2>
-            <p class="font-body-sm text-body-sm text-slate-700 mt-2 leading-relaxed">Do wiercenia dołów pod sadzonki, słupki i ogrodzenia.</p>
-            <a class="mt-3 inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold hover:text-primary-container transition-colors" href="swidry-do-gleby/index.html">
-              <span>Zobacz świdry do gleby →</span>
-            </a>
-          </div>
-
-          </div>
-          <div class="mt-space-xl pt-6 border-t border-slate-200">
-            <p class="font-body-md text-body-md text-slate-700">Szukacie tych narzędzi pod własną marką? <a class="text-primary font-semibold hover:underline" href="../marka-wlasna/index.html">Robimy to →</a></p>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- Shop Toolbar: Filters & Live Search -->
+    <section class="sticky top-18 lg:top-20 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 py-3 shadow-2xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 scrollbar-none" role="tablist" aria-label="Filtruj kategorie narzędzi">
+          <button type="button" data-filter="all" class="catalog-filter-btn px-4 py-2 rounded-lg text-xs font-bold transition-all border shrink-0 bg-slate-900 text-white border-slate-900" role="tab" aria-selected="true">
+            Wszystkie modele (8)
+          </button>
+          <button type="button" data-filter="lopaty" class="catalog-filter-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all border shrink-0 bg-white text-slate-700 border-slate-200 hover:bg-slate-100" role="tab" aria-selected="false">
+            Łopaty (2)
+          </button>
+          <button type="button" data-filter="szpadle" class="catalog-filter-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all border shrink-0 bg-white text-slate-700 border-slate-200 hover:bg-slate-100" role="tab" aria-selected="false">
+            Szpadle (2)
+          </button>
+          <button type="button" data-filter="widly" class="catalog-filter-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all border shrink-0 bg-white text-slate-700 border-slate-200 hover:bg-slate-100" role="tab" aria-selected="false">
+            Widły (2)
+          </button>
+          <button type="button" data-filter="swidry" class="catalog-filter-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all border shrink-0 bg-white text-slate-700 border-slate-200 hover:bg-slate-100" role="tab" aria-selected="false">
+            Świdry do gleby (2)
+          </button>
+        </div>
+
+        <!-- Search Input & Active Count -->
+        <div class="flex items-center gap-3 shrink-0">
+          <div class="relative w-full sm:w-64">
+            <i class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-base" aria-hidden="true"></i>
+            <input id="catalog-search" type="search" placeholder="Szukaj modelu lub SKU..." class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-slate-50 text-slate-900 font-body-sm text-xs border border-slate-300 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"/>
+          </div>
+          <span class="hidden sm:inline font-caption text-caption text-slate-600 font-medium whitespace-nowrap">
+            Widoczne: <strong id="catalog-count" class="text-slate-950 font-bold">8</strong> modeli
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Product Shop Grid -->
+    <section class="w-full py-space-xl sm:py-space-2xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+
+        <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Product 1: Łopata piaskowa -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="lopaty" data-title="łopata piaskowa stalowa steel garden" data-sku="pomi-lop-01">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO79b7uWaEYexgeOofzwS2L7omD3GWji-IAAslm3HgdpLrImJdEYYMzFZk84YN2Diwplx0OBI-mNoY7Fe-McyuKVcvIqY-gkygXy3i-bAaRAXjwyk5XPQsS6cobergvunr5w2YkqqnoC1CXJJdnzRL71ovDkozsPQURGCRRqipO5h9VjUJyyDWR2Lx3ddJSp4W7QOgJTY_P7dptw5-xH6d23zZPszKwia637d0tBZhwcZSw788wtCn" alt="Łopata piaskowa stalowa POMI STEEL GARDEN" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-LOP-01</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>W magazynie</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="lopaty/index.html">Łopata piaskowa stalowa STEEL GARDEN</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Do kopania i przeładunku piasku, ziemi i kruszywa. Krawędź wzmocniona wywinięciem bocznym.
+              </p>
+
+              <!-- Technical spec list -->
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Grubość stali</span>
+                  <strong class="text-slate-900 font-semibold text-xs">2.0 mm profilowana</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Trzonek</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Metalowy DY / jesion</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">120 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Wykończenie</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Lakier proszkowy</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shop Price & Action -->
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-LOP-01" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="lopaty/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: Łopata uniwersalna głęboka -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="lopaty" data-title="łopata uniwersalna głęboka steel garden" data-sku="pomi-lop-02">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO79b7uWaEYexgeOofzwS2L7omD3GWji-IAAslm3HgdpLrImJdEYYMzFZk84YN2Diwplx0OBI-mNoY7Fe-McyuKVcvIqY-gkygXy3i-bAaRAXjwyk5XPQsS6cobergvunr5w2YkqqnoC1CXJJdnzRL71ovDkozsPQURGCRRqipO5h9VjUJyyDWR2Lx3ddJSp4W7QOgJTY_P7dptw5-xH6d23zZPszKwia637d0tBZhwcZSw788wtCn" alt="Łopata uniwersalna głęboka POMI STEEL GARDEN" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-LOP-02</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>Produkcja seryjna</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="lopaty/index.html">Łopata uniwersalna głęboka STEEL GARDEN</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Zwiększona pojemność sztychu do załadunku materiałów sypkich, węgla, śniegu i paszy.
+              </p>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Grubość stali</span>
+                  <strong class="text-slate-900 font-semibold text-xs">2.0 mm tłoczona</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Trzonek</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Ergonomiczny DY</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">100 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Wytłoczenie</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Wysoki rant boczny</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-LOP-02" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="lopaty/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Szpadel ostry -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="szpadle" data-title="szpadel ostry hartowany steel garden" data-sku="pomi-szp-01">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM6JG0lNvxYdBuJAT5lqOPzAtpGPLjD29jnOg71R-owN-LorFP9AfltMGyFN1CumEh6iMAUkru79Vgesdb4LrTLsA9mu1Ocedf2CfWOPN46eJ7-_-ckLmwp7uHgm25Qxp4uPtckbV045QptaHXY1mLB-6L_ixfsFsa36XHZ2h1EWYKwSWUEqoIRBrUOyz-1HWgWP2TVVoRS-Ee-ruQeDQOqx5m8DLxkBWLkZ-popw53mLUMAhxhhDg" alt="Szpadel ostry hartowany POMI STEEL GARDEN" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-SZP-01</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>W magazynie</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="szpadle/index.html">Szpadel ostry hartowany STEEL GARDEN</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Do twardego, kamienistego gruntu, korzeni i wykopów. Zintegrowana stopka pod nacisk buta.
+              </p>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Grubość stali</span>
+                  <strong class="text-slate-900 font-semibold text-xs">2.2 mm hartowana</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Wzmocnienie</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Przetłoczenie wzdłużne</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">120 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Trzonek</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Profilowana stal DY</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-SZP-01" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="szpadle/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: Szpadel prosty -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="szpadle" data-title="szpadel prosty do darni steel garden" data-sku="pomi-szp-02">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM6JG0lNvxYdBuJAT5lqOPzAtpGPLjD29jnOg71R-owN-LorFP9AfltMGyFN1CumEh6iMAUkru79Vgesdb4LrTLsA9mu1Ocedf2CfWOPN46eJ7-_-ckLmwp7uHgm25Qxp4uPtckbV045QptaHXY1mLB-6L_ixfsFsa36XHZ2h1EWYKwSWUEqoIRBrUOyz-1HWgWP2TVVoRS-Ee-ruQeDQOqx5m8DLxkBWLkZ-popw53mLUMAhxhhDg" alt="Szpadel prosty POMI STEEL GARDEN" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-SZP-02</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>Produkcja seryjna</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="szpadle/index.html">Szpadel prosty do darni STEEL GARDEN</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Do równego wyrównywania brzegów trawnika, przekopywania rabat i odcinania darni.
+              </p>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Krawędź</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Prosta, szlifowana</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Grubość stali</span>
+                  <strong class="text-slate-900 font-semibold text-xs">2.2 mm hartowana</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">120 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Zabezpieczenie</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Lakier proszkowy</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-SZP-02" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="szpadle/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5: Widły gospodarcze 4-zębne -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="widly" data-title="widły 4-zębne gospodarcze steel garden" data-sku="pomi-wid-01">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_7QdwYWCubz_JjHGCSpTQmQ1DY_xsghi4FdVgMXE1VFAzRFdlJDp9Colnwgqn84H3fAtJq1xH5J--lXSJvSqN3C375zcSRN2cz1DzWPaJhvblzClQTvEj2YhkPn-d6wX6fwatgqIBzB3sqRXraqDqpWmxtOSVn09nqA9WTdcRYFOpjTo62qxrVFqqWRHXGb4DAPFFx3CsPp0nOHJ3KPUzrCJllDTj_lBJPhhvSrEpI-q-_Yq1tZrd" alt="Widły gospodarcze 4-zębne POMI STEEL GARDEN" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-WID-01</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>W magazynie</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="widly/index.html">Widły 4-zębne gospodarcze STEEL GARDEN</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Do załadunku siana, słomy, obornika i porządków gospodarskich. Kute zęby sprężynowe odporne na wygięcia.
+              </p>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Stal</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Sprężynowa kuta</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Konstrukcja</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Spawana tuleja</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">90 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Liczba zębów</span>
+                  <strong class="text-slate-900 font-semibold text-xs">4 zęby hartowane</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-WID-01" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="widly/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6: Widły do kompostu 5-zębne -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="widly" data-title="widły do kompostu i ściółki 5-zębne steel garden" data-sku="pomi-wid-02">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_7QdwYWCubz_JjHGCSpTQmQ1DY_xsghi4FdVgMXE1VFAzRFdlJDp9Colnwgqn84H3fAtJq1xH5J--lXSJvSqN3C375zcSRN2cz1DzWPaJhvblzClQTvEj2YhkPn-d6wX6fwatgqIBzB3sqRXraqDqpWmxtOSVn09nqA9WTdcRYFOpjTo62qxrVFqqWRHXGb4DAPFFx3CsPp0nOHJ3KPUzrCJllDTj_lBJPhhvSrEpI-q-_Yq1tZrd" alt="Widły do kompostu 5-zębne POMI STEEL GARDEN" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-WID-02</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>Produkcja seryjna</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="widly/index.html">Widły do kompostu i ściółki 5-zębne</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Gęstszy rozstaw 5 zębów do aeracji pryzmy kompostowej, przerzucania zrębków, kory i ściółki.
+              </p>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Stal</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Sprężynowa elastyczna</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Trzonek</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Jesion / metal DY</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">80 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Zastosowanie</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Kompost, kora, liście</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-WID-02" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="widly/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 7: Świder ręczny 150 mm -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="swidry" data-title="świder ręczny do gleby 150 mm steel garden" data-sku="pomi-swi-150">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANb0Aouc4SdWYs7uNq_ow6lPu7dXyMAY2T-j6bjVCM6tsrQsqJvPP6rBnLnzjp4ht8GrAHKKlbh4sdy7lvIpiJbN3oX9AK_iPx9yFQCCMKTexWX9fRkZfVEwbFqhknJM_V1kIXHHskkZX67iS_PNRy89CYievp8diCjfa7swtVanL-U4_0HaPrhLOl-esEenzjieaevlbA2NBk4xk9gR-MabLkfG8V4WHOaowA9jAwobZ5Hkxjppzu" alt="Świder ręczny do gleby 150 mm POMI" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-SWI-150</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>W magazynie</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="swidry-do-gleby/index.html">Świder ręczny do gleby 150 mm</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Optymalna średnica pod słupki siatki ogrodzeniowej, sadzonki drzewek i konstrukcje pergoli.
+              </p>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Średnica / Długość</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Ø 150 mm / 110 cm</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Ślimak</span>
+                  <strong class="text-slate-900 font-semibold text-xs">3.0 mm spawany</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">60 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Uchwyt</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Poprzeczka T gumowana</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-SWI-150" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="swidry-do-gleby/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 8: Świder ręczny 200 mm wzmocniony -->
+          <article class="product-item bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all flex flex-col justify-between group p-6" data-category="swidry" data-title="świder ręczny do gleby 200 mm wzmocniony" data-sku="pomi-swi-200">
+            <div>
+              <div class="w-full aspect-[4/3] flex items-center justify-center mb-5">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANb0Aouc4SdWYs7uNq_ow6lPu7dXyMAY2T-j6bjVCM6tsrQsqJvPP6rBnLnzjp4ht8GrAHKKlbh4sdy7lvIpiJbN3oX9AK_iPx9yFQCCMKTexWX9fRkZfVEwbFqhknJM_V1kIXHHskkZX67iS_PNRy89CYievp8diCjfa7swtVanL-U4_0HaPrhLOl-esEenzjieaevlbA2NBk4xk9gR-MabLkfG8V4WHOaowA9jAwobZ5Hkxjppzu" alt="Świder ręczny do gleby 200 mm POMI" class="max-h-full max-w-full object-contain" loading="lazy"/>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="font-mono text-slate-500 font-medium">SKU: POMI-SWI-200</span>
+                <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>Produkcja seryjna</span>
+                </span>
+              </div>
+
+              <h2 class="font-title-sm text-title-sm font-bold text-slate-950 group-hover:text-primary transition-colors line-clamp-2">
+                <a href="swidry-do-gleby/index.html">Świder ręczny do gleby 200 mm wzmocniony</a>
+              </h2>
+              <p class="font-body-sm text-xs text-slate-600 mt-1.5 line-clamp-2">
+                Większa średnica pod fundamenty punktowe, pale, duże bryły korzeniowe i nasadzenia parkowe.
+              </p>
+
+              <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Średnica / Długość</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Ø 200 mm / 110 cm</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Sztywność</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Wzmocniony rdzeń rury</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Partia paletowa</span>
+                  <strong class="text-slate-900 font-semibold text-xs">50 szt. / EURO</strong>
+                </div>
+                <div>
+                  <span class="block text-slate-500 font-medium text-xs">Pilot prowadzący</span>
+                  <strong class="text-slate-900 font-semibold text-xs">Szpic kuty hartowany</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-500 font-medium">Cena hurtowa:</span>
+                <span class="text-sm font-bold text-slate-950">Wycena B2B (partie)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="../kontakt/index.html?produkt=POMI-SWI-200" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary text-white font-label-sm text-xs font-bold hover:bg-primary-container transition-colors shadow-2xs">
+                  <span>Zapytaj</span>
+                  <i class="ph-bold ph-envelope-simple text-xs" aria-hidden="true"></i>
+                </a>
+                <a href="swidry-do-gleby/index.html" class="w-full inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 text-slate-800 font-label-sm text-xs font-semibold hover:bg-slate-200 transition-colors border border-slate-200">
+                  <span>Szczegóły</span>
+                  <i class="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty Filter State -->
+        <div id="catalog-empty" class="hidden my-12 p-8 text-center bg-white rounded-2xl border border-slate-200 shadow-xs max-w-lg mx-auto">
+          <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center mx-auto mb-3">
+            <i class="ph-bold ph-magnifying-glass text-2xl" aria-hidden="true"></i>
+          </div>
+          <p class="font-title-md text-title-md font-bold text-slate-900">Brak pasujących modeli</p>
+          <p class="font-body-sm text-body-sm text-slate-600 mt-1">
+            Nie znaleźliśmy narzędzi odpowiadających wpisanej frazie lub filtrowi.
+          </p>
+          <button id="catalog-reset-btn" type="button" class="mt-4 px-5 py-2.5 rounded-lg bg-slate-900 text-white font-label-sm text-xs font-bold hover:bg-primary transition-colors">
+            Pokaż wszystkie modele (8)
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OEM Banner Callout (Clean Industrial Dark Strip) -->
+    <section class="w-full py-space-xl sm:py-space-2xl bg-slate-950 text-white border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="max-w-2xl">
+            <p class="font-label-md text-label-md font-bold text-red-400 mb-1">
+              Produkcja kontraktowa
+            </p>
+            <h2 class="font-headline-md text-headline-md sm:text-headline-lg text-white font-bold tracking-tight">
+              Szukacie tych narzędzi pod własną marką?
+            </h2>
+            <p class="font-body-sm text-body-sm text-slate-300 mt-2 max-w-xl leading-relaxed">
+              Każdy z powyższych modeli możemy wyprodukować w barwach Twojej firmy (paleta RAL), z trwałym znakowaniem logo i kodami EAN pod sieci handlowe.
+            </p>
+          </div>
+          <a href="../marka-wlasna/index.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-white font-label-md text-label-md font-bold hover:bg-primary-container transition-colors shrink-0 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <span>Sprawdź ofertę marki własnej</span>
+            <i class="ph-bold ph-arrow-right text-base" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="w-full bg-slate-950 text-slate-300 border-t border-slate-800">
@@ -328,7 +896,7 @@
       </div>
 
       <div class="flex flex-col gap-2.5">
-        <h4 class="font-title-sm text-title-sm text-white mb-1 font-bold">Katalog produktów</h4>
+        <h3 class="font-title-sm text-title-sm text-white mb-1 font-bold">Katalog produktów</h3>
         <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-slate-400 hover:text-white transition-colors" href="../produkty/lopaty/index.html">
           <i class="ph-bold ph-caret-right text-xs text-slate-600 group-hover:text-red-400 group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
           <span>Łopaty</span>
@@ -352,7 +920,7 @@
       </div>
 
       <div class="flex flex-col gap-2.5">
-        <h4 class="font-title-sm text-title-sm text-white mb-1 font-bold">Firma</h4>
+        <h3 class="font-title-sm text-title-sm text-white mb-1 font-bold">Firma</h3>
         <a class="group inline-flex items-center gap-2 font-body-sm text-body-sm text-slate-400 hover:text-white transition-colors" href="../marka-wlasna/index.html">
           <i class="ph-bold ph-caret-right text-xs text-slate-600 group-hover:text-red-400 group-hover:translate-x-0.5 transition-all" aria-hidden="true"></i>
           <span>Produkcja pod marką własną</span>
@@ -368,25 +936,25 @@
       </div>
 
       <div class="flex flex-col gap-3">
-        <h4 class="font-title-sm text-title-sm text-white font-bold">Dział zamówień</h4>
+        <h3 class="font-title-sm text-title-sm text-white font-bold">Dział zamówień</h3>
         <div class="flex items-start gap-2.5">
           <i class="ph-bold ph-phone text-red-500 text-xl mt-0.5" aria-hidden="true"></i>
           <div>
-            <span class="font-caption text-caption text-slate-400 uppercase block font-semibold">Zadzwoń</span>
+            <span class="font-caption text-caption text-slate-400 block font-medium">Zadzwoń</span>
             <a class="font-title-md text-title-md font-bold text-white hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" href="tel:603679210">603 679 210</a>
           </div>
         </div>
         <div class="flex items-start gap-2.5">
           <i class="ph-bold ph-envelope-simple text-red-500 text-xl mt-0.5" aria-hidden="true"></i>
           <div>
-            <span class="font-caption text-caption text-slate-400 uppercase block font-semibold">Napisz</span>
+            <span class="font-caption text-caption text-slate-400 block font-medium">Napisz</span>
             <a class="font-body-sm text-body-sm font-semibold text-white hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" href="mailto:biuro@lopaty.eu">biuro@lopaty.eu</a>
           </div>
         </div>
         <div class="flex items-start gap-2.5">
           <i class="ph-bold ph-clock text-red-500 text-xl mt-0.5" aria-hidden="true"></i>
           <div>
-            <span class="font-caption text-caption text-slate-400 uppercase block font-semibold">Godziny pracy</span>
+            <span class="font-caption text-caption text-slate-400 block font-medium">Godziny pracy</span>
             <span class="font-body-sm text-body-sm text-slate-400">Pn-Pt: 07:00-17:00</span>
           </div>
         </div>

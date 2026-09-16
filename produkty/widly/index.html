@@ -140,7 +140,7 @@
           <i class="ph ph-house text-slate-500 group-hover:text-primary transition-colors text-lg" aria-hidden="true"></i>
           <span>Strona główna</span>
         </a>
-        <a class="group inline-flex items-center gap-2 px-3.5 py-2 text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-colors rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="../../produkty/index.html">
+        <a class="group inline-flex items-center gap-2 px-3.5 py-2 text-slate-950 bg-slate-100 transition-colors rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="../../produkty/index.html">
           <i class="ph ph-stack text-slate-500 group-hover:text-primary transition-colors text-lg" aria-hidden="true"></i>
           <span>Katalog produktów</span>
         </a>
@@ -255,23 +255,129 @@
 
   <div id="mobile-menu-backdrop" class="hidden fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-40 lg:hidden" aria-hidden="true"></div>
 
-  <main class="w-full pt-28 lg:pt-30 min-h-screen" id="main-content">
-    <div class="flex flex-col w-full">
-      <section class="w-full py-space-3xl bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 max-w-3xl">
-          <a class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold hover:text-primary-container transition-colors mb-space-md" href="../index.html">
-            <i class="ph-bold ph-arrow-left text-base" aria-hidden="true"></i>
-            <span>Wróć do katalogu</span>
-          </a>
-          <h1 class="font-headline-lg text-headline-lg-mobile sm:text-display-xl text-slate-950 font-bold tracking-tight mb-space-md">Widły</h1>
-          <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mb-space-sm">Widły ze stali, z linii STEEL GARDEN — do przerzucania kompostu, obornika, ściółki i siana.</p>
-          <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mb-space-sm">Zęby ze stali, uchwyt dobrany pod dłoń i pod długą pracę.</p>
-          <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mb-space-sm">Robimy je też pod marką klienta — jeśli szukacie widły do sprzedaży pod własnym logo, zobaczcie <a class="text-primary font-semibold hover:underline" href="../../marka-wlasna/index.html">ofertę marki własnej →</a></p>
-          <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mb-space-sm">Zapytaj o dostępność i wycenę: <a class="text-primary font-semibold hover:underline" href="../../kontakt/index.html">kontakt →</a></p>
+  <main class="w-full pt-28 lg:pt-32 min-h-screen bg-slate-50" id="main-content">
+    <!-- Breadcrumbs & Header -->
+    <section class="w-full bg-white border-b border-slate-200 py-space-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <nav aria-label="Ścieżka powrotu" class="mb-4">
+          <ol class="flex items-center gap-2 font-caption text-caption text-slate-500">
+            <li>
+              <a href="../../index.html" class="hover:text-primary transition-colors flex items-center gap-1">
+                <i class="ph ph-house text-sm" aria-hidden="true"></i>
+                <span>Strona główna</span>
+              </a>
+            </li>
+            <li aria-hidden="true" class="text-slate-400">/</li>
+            <li>
+              <a href="../index.html" class="hover:text-primary transition-colors">Katalog produktów</a>
+            </li>
+            <li aria-hidden="true" class="text-slate-400">/</li>
+            <li class="text-slate-900 font-semibold" aria-current="page">Widły</li>
+          </ol>
+        </nav>
+
+        <a class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold hover:text-primary-container transition-colors mb-3" href="../index.html">
+          <i class="ph-bold ph-arrow-left text-base" aria-hidden="true"></i>
+          <span>Wróć do spisu kategorii</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="w-full py-space-2xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          
+          <!-- Product Image Showcase (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="relative w-full h-80 sm:h-96 rounded-3xl bg-white border border-slate-200 p-6 flex items-center justify-center shadow-sm">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_7QdwYWCubz_JjHGCSpTQmQ1DY_xsghi4FdVgMXE1VFAzRFdlJDp9Colnwgqn84H3fAtJq1xH5J--lXSJvSqN3C375zcSRN2cz1DzWPaJhvblzClQTvEj2YhkPn-d6wX6fwatgqIBzB3sqRXraqDqpWmxtOSVn09nqA9WTdcRYFOpjTo62qxrVFqqWRHXGb4DAPFFx3CsPp0nOHJ3KPUzrCJllDTj_lBJPhhvSrEpI-q-_Yq1tZrd" alt="Widły gospodarcze POMI z serii STEEL GARDEN" class="w-full h-full object-contain" fetchpriority="high"/>
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900 text-white font-label-sm text-label-sm font-bold shadow-xs">
+                Stal sprężynowa
+              </span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-slate-200 text-slate-700 font-body-sm text-body-sm flex items-center gap-3">
+              <i class="ph-bold ph-shield-check text-primary text-2xl shrink-0" aria-hidden="true"></i>
+              <span>100% polska produkcja ze stali — własny zakład w Rzeszotarach.</span>
+            </div>
+          </div>
+
+          <!-- Product Technical Info (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col gap-6 bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
+            <div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider mb-2">
+                Linia STEEL GARDEN
+              </span>
+              <h1 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-slate-950 font-bold tracking-tight">
+                Widły gospodarcze ze stali
+              </h1>
+              <p class="font-body-lg text-body-lg text-slate-700 leading-relaxed mt-2">
+                Widły ze stali z linii STEEL GARDEN — do przerzucania kompostu, obornika, ściółki, siana oraz liści. Sprężyste zęby profilowane ze stali, uchwyt dobrany pod dłoń i pod długą pracę, nie na jedno sezonowe użycie.
+              </p>
+            </div>
+
+            <!-- Parameters Table -->
+            <div class="border-t border-slate-200 pt-6">
+              <h2 class="font-headline-sm text-headline-sm text-slate-950 font-bold mb-4">
+                Parametry techniczne
+              </h2>
+              <dl class="divide-y divide-slate-100 font-body-sm text-body-sm">
+                <div class="py-3 flex items-center justify-between">
+                  <dt class="text-slate-600 font-medium">Liczba zębów:</dt>
+                  <dd class="text-slate-950 font-bold">4 zęby profilowane sprężynowe</dd>
+                </div>
+                <div class="py-3 flex items-center justify-between">
+                  <dt class="text-slate-600 font-medium">Konstrukcja tulei:</dt>
+                  <dd class="text-slate-950 font-bold">Spawana, wzmocniona tuleja stalowa</dd>
+                </div>
+                <div class="py-3 flex items-center justify-between">
+                  <dt class="text-slate-600 font-medium">Odporność mechaniczna:</dt>
+                  <dd class="text-slate-950 font-bold">Zęby odporne na trwałe wygięcia i pęknięcia</dd>
+                </div>
+                <div class="py-3 flex items-center justify-between">
+                  <dt class="text-slate-600 font-medium">Dostępne trzonki:</dt>
+                  <dd class="text-slate-950 font-bold">Profilowana rura stalowa DY lub selekcjonowany jesion</dd>
+                </div>
+                <div class="py-3 flex items-center justify-between">
+                  <dt class="text-slate-600 font-medium">Zabezpieczenie powierzchni:</dt>
+                  <dd class="text-slate-950 font-bold">Lakier proszkowy (odporny na wilgoć i agresywne środowisko)</dd>
+                </div>
+                <div class="py-3 flex items-center justify-between">
+                  <dt class="text-slate-600 font-medium">Forma dostawy:</dt>
+                  <dd class="text-slate-950 font-bold">Partie paletowe EURO, zabezpieczone do spedycji</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-200">
+              <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-white font-label-md text-label-md font-bold hover:bg-primary-container transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="../../kontakt/index.html">
+                <i class="ph-bold ph-chat-teardrop-dots text-base" aria-hidden="true"></i>
+                <span>Zapytaj o dostępność i wycenę</span>
+              </a>
+              <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-slate-100 text-slate-900 font-label-md text-label-md font-bold hover:bg-slate-200 transition-colors border border-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="tel:603679210">
+                <i class="ph-bold ph-phone text-base text-primary" aria-hidden="true"></i>
+                <span>Zadzwoń: 603 679 210</span>
+              </a>
+            </div>
+
+            <!-- Private Label Box for Forks -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <strong class="font-title-sm text-title-sm text-slate-950 font-bold block">Szukacie wideł pod marką własną?</strong>
+                <p class="font-body-sm text-body-sm text-slate-600 mt-0.5">Produkujemy ten model z logotypem klienta, w palecie kolorystycznej RAL i etykietą EAN.</p>
+              </div>
+              <a href="../../marka-wlasna/index.html" class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold hover:underline shrink-0">
+                <span>Oferta marki własnej →</span>
+              </a>
+            </div>
+
+          </div>
 
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="w-full bg-slate-950 text-slate-300 border-t border-slate-800">
